@@ -1,0 +1,210 @@
+nav a[href^="#"] {
+/*
+    font-weight: 400;
+    text-transform: uppercase;
+*/
+}
+/*--------navbar styles---------------*/
+#potp-main-nav {
+/*
+    background-color: transparent;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 100%;
+    z-index: 998
+*/
+}
+#potp-main-nav.solid {
+/*
+    background-color: #fff;
+    height: 50px;
+    -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+*/
+}
+.nav-inner {
+/*
+    margin: 0 auto;
+    padding: 0;
+*/
+    position: relative;
+/*    width: 95%;*/
+}
+/*-----------nav header --------------*/
+.nav-header { 
+/*    float: left;*/
+}
+/*-----------nav logo ----------------*/
+.navbar-logo img[src*="logo-white"]{
+/*
+    margin: 5px;
+    width: 100px;
+*/
+}
+.navbar-logo img[src*="potp-logo"]{
+/*
+    -webkit-box-shadow: 0 0 15px #303030;
+    box-shadow: 0 0 15px #303030;
+    margin: 0;
+    -webkit-transition: width 0.2s;
+    transition: width 0.2s;
+    width: 80px;
+*/
+}
+.navbar-logo img[src*="potp-logo"]:hover {
+/*    width: 100px;*/
+}
+/*--------nav button-----------------*/
+nav button {
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    color: #FFF;
+    display: block;
+    font-size: 32px;
+    padding: 0 10px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    z-index: 999;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+nav button:focus,
+nav.solid button:focus {
+    outline: none;
+}
+nav.solid button {
+    border: 2px solid #2A57CC;
+    color: #2A57CC;
+    font-size: 26px;
+    right: 0;
+    top: 5px;
+}
+
+@-webkit-keyframes roll-in {
+    0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    25% {color: #2A57CC;}
+    100% {
+        border: 2px solid #2A57CC;
+        color: #2A57CC;
+        right: 47px;
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+@-webkit-keyframes roll-out {
+    0% {right: 47px;-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    25% {color: #2A57CC;}
+    100% {
+        right: 0;
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes roll-out {
+    0% {right: 47px;-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    25% {color: #2A57CC;}
+    100% {
+        right: 0;
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/*-----------nav list ---------------*/
+#potp-nav {
+/*    float: right;*/
+}
+.nav-list {
+    background: #fff;
+    list-style: none;
+    float: right;
+    height: 100vh;
+    margin: 0;
+    padding: 60px 0;
+    position: absolute;
+    right: -300px;
+    width: 200px
+}
+.nav-list li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+/*--------- nav link ---------------*/
+.nav-list li a:link,
+.nav-list li a:visited {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    margin: 0;
+    padding: 18px 10px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.slide .nav-list a:link,
+.slide .nav-list a:visited,
+nav.solid .nav-list a:link,
+nav.solid .nav-list a:visited {
+    color: #2A57CC;
+}
+.slide .nav-list a:hover,
+.slide .nav-list a.active,
+.nav-list li a:hover,
+.nav-list li a.active,
+nav.solid .nav-list li a:hover,
+nav.solid .nav-list li a.active {
+    color: #fff;
+    background-color: #2A57CC
+}
+/*------------ QUERIES--------------*/
+@media screen and (min-width: 580px) {
+    #potp-main-nav.solid { height: 60px;}
+    .navbar-logo img[src*="potp-logo"]{ width: 100px;}
+    nav.solid button {
+        font-size: 32px;
+        top: 7px
+    }
+    .nav-list li { margin: 1em 0}
+}
+@media screen and (min-width: 960px) {
+    .nav-inner {
+        max-width: 1400px;
+        width: 90%;
+    }
+    .navbar-logo img[src*="logo-white"] {
+        margin: 5px 0;
+        width: 150px;
+    }
+    .navbar-logo img[src*="potp-logo"] { width: 100px;}
+    .navbar-logo img[src*="potp-logo"]:hover { width: 110px;}
+    nav.solid button,
+    button[class="toggle-slide"] {
+        -webkit-animation-name: none;
+        animation-name: none;
+        display: none;
+    }
+    .nav-list {
+        position: inherit;
+        background: transparent;
+        height: auto;
+        padding: 0;
+        width: inherit;
+    }
+        .nav-list li {
+        float: left;
+        margin: 1em 3px;
+        width: auto;
+    }
+    nav.solid .nav-list li{ margin: 0 5px;}
+}

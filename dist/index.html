@@ -1,0 +1,75 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109028742-1"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-109028742-1');
+
+    </script>
+
+    <meta name="author" content="Colin Friend">
+    <meta name="description" content="Part of the Pack is a fully insured pet care service for Lower Cape Cod, MA. Dog walking, pet sitting, or pet visits. Part of the Pack is experienced with animals of all shapes and sizes. Join the Pack today!">
+    <meta name="keywords" content="dog walking, pet sitting, pet care, pet visits, Cape Cod">
+
+    <title>Part of the Pack</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="public/css/simple-grid.css">
+    <link rel="stylesheet" type="text/css" href="css/bundled.css">
+
+    <script src="https://use.fontawesome.com/6de892528c.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+
+<body>
+    <header id="home">
+        <nav id="potp-main-nav">
+            <div class="nav-inner">
+                <div class="nav-header">
+                    <button type="button" class="toggle-slide" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-paw"></i>
+                    </button>
+                    <a class="navbar-logo" href="#home"><img id="nav-logo" src="public/img/logo/logo-white.svg" alt="part of the pack logo"></a>
+                </div>
+                <div id="potp-nav">
+                    <ul class="nav-list">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#service">Services</a></li>
+                        <li><a href="#pack-gallery">The Pack</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="banner-msg">
+            <h1>What can the pack<br>do for you?</h1>
+            <ul>
+                <li><a class="banner-nav" href="#service">pet visits</a></li>
+                <li><a class="banner-nav" href="#service">dog walking</a></li>
+                <li><a class="banner-nav" href="#service">pet sitting</a></li>
+            </ul>
+            <a id="banner-btn" class="cta-btn cta-btn-full" href="#service">Learn more</a>
+        </div>
+    </header>
+
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_Z2IB0LrxE6GwdMpT5wyDR");
+        })();
+
+    </script>
+</body>
+
+</html>

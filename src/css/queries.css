@@ -1,0 +1,31 @@
+@media screen and (min-width: 400px) {
+   h1 { font-size: 3em;}
+   #banner-msg {
+       padding: 0 40px;
+       top: 24%;
+   }
+   #contact-form { width: 90%;}
+}
+@media screen and (min-width: 760px) {
+    body {font-size: 18px;}
+    h1 { font-size: 3.5em;}
+    #banner-msg { top: 35%;}
+    #banner-msg ul { display: block;}
+    .quote:nth-of-type(1n+2) { display: block;}
+}
+
+@media screen and (min-width: 1020px) {
+    #contact { background-size: contain;}
+    #banner-msg {
+        padding: 0;
+        top: 35%;
+        width: 700px;
+    }
+    .quote { display: block;}
+    .rachel-img { display: block;}
+    #contact-form { width: 100%;}
+}
+@media screen and (min-width: 1320px) {
+    #banner-msg { left: 10%;}
+    .riley-img { display: block;}
+}

@@ -1,0 +1,410 @@
+/*-------------COLORS----------------------------
+Primary blue - #2A57CC (42,87,204)
+Secondary blue - #EBEFFA
+Primary Orange - #FF6F1C #FF7C30
+Secondary Orange - #F55D17
+Gray - #979797
+Black - #303030
+
+fb - #3b5998 (59,89,152), #9cacd1 (156,172,209)
+ig - mag, blue, purp, orng, yel #c32aa3 (195,42,163), #4C5fd7 (76,95,215) #7232bd (144,50,189) #f46f30 (244,111,48) #ffdc7d (255,220,125)
+sp - yel #fffc00 (255,252,0) white blck 
+yp - #do1d15 (208,29,21) #cf2d33 (207,45,51)
+twr - #00b6f1 (0,182,241) #2290bf (34,144,191)
+------------------------------------------------*/
+/*-------------------- ELEMENT/GENERAL STYLES -----------------------------------*/
+body {
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    position: relative;
+}
+h1, h2, h3 {
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 3em;
+    letter-spacing: -3px;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5),
+                 0 0 18px rgba(0, 0, 0, 0.6),
+                 0 0 28px rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+}
+h2 { font-size: 2em;}
+h3 { 
+    font-size: 1.8em;
+    font-weight: 400
+}
+h2:after {
+    background-color: #2A57CC;
+    content: "";
+    display: block;
+    height: 2px;
+    margin: 8px auto;
+    width: 150px;
+}
+p { text-indent: 2.5em;}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    display: inline-block;
+}
+section { padding: 80px 0;}
+.cta-btn:link, .cta-btn:visited {
+    background-color: #fff;
+    border: 2px solid #FF7C30;
+    border-radius: 7px;
+    color: #FF7C30;
+    font-size: 1.1em;
+    font-weight: 400;
+    padding: 10px 18px;
+    text-decoration: none;
+    text-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+.cta-btn-full:link, .cta-btn-full:visited {
+    background-color: #FF7C30;
+    color: #fff;
+}
+.cta-btn:active, .cta-btn:hover,
+.cta-btn-full:active, .cta-btn-full:hover {
+    background-color: #F55D17;
+    border-color: #F55D17;
+    color: #fff;
+}
+/*----------- BANNER STYLES ------------------------------------------------------*/
+header {
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url("../img/banner-bg-min.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+#banner-msg {
+    color: #fff;
+    left: 5%;
+    padding: 0 20px;/*------------------------------?change width instead of adding padding---------------------*/
+    position: absolute;
+    text-align: center;
+    top: 26%;
+    width: 90%
+}
+#banner-msg ul {
+    display: none;
+}
+#banner-msg ul li {
+    margin: 0;
+    padding: 0 5px;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.3),
+                 0 0 18px rgba(0, 0, 0, 0.4);
+}
+#banner-msg ul li:nth-of-type(2n){
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+a.banner-nav:link,
+a.banner-nav:visited {
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a.banner-nav:active,
+a.banner-nav:hover {
+    color: #FF6F1C;
+}
+#banner-btn {
+    display: inline-block;
+    margin-top: 20px;
+}
+/*---------------------- WELCOME SECTION --------------------------------------------*/
+#welcome p { margin: 24px auto 0;}
+.social-links {
+    margin: 30px auto 0;
+    text-align: center;
+}
+.social-icon-group li {
+    font-size: 54px;
+    margin: 0 5px;
+}
+.social-icon { transition: all 0.2s;}
+.fa-facebook-square { color: #6D84b4;}
+.fa-facebook-square:hover { color: #3b5998;}
+.fa-twitter-square { color: #2290bf;}
+.fa-twitter-square:hover { color: #00b6f1;}
+.fa-yelp { color: #cf2d33;}
+.fa-yelp:hover { color: #ff0000;}
+.fa-snapchat-square { color: rgba(255, 210, 0, 0.8);}
+.fa-snapchat-square:hover { color: rgba(255, 210, 0, 1);}
+.fa-ig-gradient {
+	background: linear-gradient(#ffdc7d, #f46f30, #4C5fd7);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.fa-ig-gradient:hover {
+	background: linear-gradient(#4C5fd7, #7232bd, #c32aa3, #ffdc7d);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+/*--------------------- ABOUT US SECTION ---------------------------------------------*/
+#about {
+    background-color: #5E8BFF;
+    color: #fff;
+    position: relative;
+}
+.about-content {
+    line-height: 1.428;
+    margin-top: 24px;
+    position: relative
+}
+#about-images { position: relative;}
+.about-img-wrapper {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3), 0 0 22px rgba(0, 0, 0, 0.4);
+    width: 240px;
+}
+.img-container {
+    background-color: #fff;
+    border: 8px solid #fff;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    max-height: 200px;
+    overflow: hidden;
+    width: 100%;
+}
+.img-container img {
+    opacity: 0.8;
+    width: 100%;
+}
+.tag-container {
+    background-color: #fff;
+    border: 10px solid #fff;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: #555;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+.rachel-img {
+    display: none;
+    right: 20px;
+    position: absolute;
+    top: -20px;
+    transform: rotate(10deg);
+    transition: all 0.3s;
+    z-index: 23;
+}
+.rachel-img:hover {
+    transform: scale(1.25)
+}
+.riley-img {
+    display: none;
+    position: absolute;
+    right: 40px;
+    top: 200px;
+    transform: rotate(-20deg);
+    transition: all 0.3s;
+    z-index: 22;
+}
+.riley-img:hover {
+    transform: scale(1.25);
+    z-index: 24;
+}
+/*-------------------- SERVICES SECTION ----------------------------------------------*/
+#service { background-color: #F0F4FF;}
+#service p { margin-top: 24px;}
+.service-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 18px #cfcfcf,
+                -2px 0 24px #cfcfcf;
+    margin: 40px 10px;
+}
+.service-card div {
+    border-bottom: 1px solid #DEE5F7;
+    padding: 24px 12px;
+}
+.service-card div:first-child {
+    background-color: #F6F8FC;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: center;
+}
+.service-card div:last-child {
+    border-bottom: transparent;
+    text-align: center;
+}
+.service-price {
+    color: #FF7C30; 
+    display: block;
+    font-size: 0.9em;
+    font-weight: 300;
+}
+.service-list {
+    width: 100%;
+}
+.service-list li {
+    display: block;
+    text-align: center;
+    margin: 12px 0;
+}
+.fa-check {
+    color: #FF7C30;
+    margin: 0 7px 0 0;
+}
+/*---------------------- GALLERY SECTION --------------------------------------------*/
+#carousel-top { margin: 20px 0;}
+.img-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    list-style: none;
+    width: 100%;
+}
+.img-gallery li { 
+    box-shadow: 0 0 18px #CCC;
+    float: left;
+    margin: 12px 6px;
+    height: 180px;
+    transition: transform 0.3s;
+    width: 200px;
+}
+.img-gallery li:hover {
+    transform: scale(1.5);
+}
+/*---------------------- CONTACT US SECTION -------------------------------*/
+#contact {
+    background-image:  url("../img/contact-bg-min.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 0;
+}
+#contact .container { padding-top: 40px;}
+#contact-msg h2 { margin-top: 0;}
+#contact-msg p {
+    margin-top: 20px;
+    padding: 0 10px;
+}
+#contact-form {
+    background-color: #EBEFFA;
+    border-radius: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3), 0 0 16px rgba(0, 0, 0, 0.3);
+    color: #303030;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+#contact-form h3 { margin: 10px 0;}
+#contact-form h3:after {
+    background-color: #2A57CC;
+    content: "";
+    display: block;
+    height: 1.5px;
+    margin: 8px auto 24px;
+    width: 150px;
+}
+label { font-weight: 300;}
+#contact-form button {
+    background-color: #fff;
+    border: 2px solid #FF7C30;
+    border-radius: 7px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.2);
+    color: #FF7C30;
+    display: block;
+    font-size: 1.1em;
+    height: 40px;
+    margin: 0 auto;
+    padding: 3px 18px;
+    text-decoration: none;
+    text-shadow: 0 0 8px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+#contact-form button:hover {
+    background-color: #FF7C30;
+    color: #fff;
+}
+#contact-form button:active { background-color: #F55D17;}
+/*----------------------------- TESTIMONIALS -------------------------------------*/
+#testimonials { margin-top: 40px;}
+.quote { display: none;}
+blockquote {
+    border-width: 0;
+    font-size: 0.85em;
+    margin: 0 auto;
+    width: 90%;
+}
+blockquote::before {
+    color: #777;
+    content: "\201C";
+    display: block;
+    font-size: 4.5em;
+    left: 22px;
+    position: absolute;
+    top: -28px;
+}
+blockquote img {
+    border-radius: 50%;
+    display: block;
+    float: left;
+    height: 75px;
+    margin: 0 10px 0 50px;
+    width: 75px;
+}
+cite {
+    display: block;
+    font-size: 0.8em;
+    margin-top: 30px;
+}
+/*------------------------- FOOTER -----------------------------------------*/
+footer {
+    background: #303030;
+    box-shadow: 0 -2px 8px #303030;
+    color: #D1D1D1;
+    font-size: 0.9em;
+    padding: 0 0 60px 0;
+}
+.footer-top { background-color: #3D3D3D;}
+.footer-bottom { margin-top: 40px;}
+footer ul {
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+}
+#footer-info ul{ text-align: left}
+footer a:link, footer a:visited {
+    color: #D1D1D1;
+    text-decoration: none;
+    text-transform: none;
+}
+#footer-info li a:hover,
+#footer-links li a:hover {
+    border-bottom: 1px solid #fff;
+    color: #FFF;
+}
+#footer-icons ul li {
+    display: inline-block;
+    font-size: 2.5em;
+    margin: 0 5px;
+}
+#footer-icons li i { color: #D1D1D1}
+#footer-icons .fa-facebook-square:hover { color: #4C5fd7;}
+#footer-icons .fa-twitter-square:hover { color: #2290bf;}
+#footer-icons .fa-yelp:hover { color: #ff0000;}
+#footer-icons .fa-snapchat-square:hover { color: rgba(255, 210, 0, 1);}
+#footer-icons .fa-instagram:hover {
+	background: linear-gradient(#4C5fd7, #7232bd, #c32aa3, #ffdc7d);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

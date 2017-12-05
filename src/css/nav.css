@@ -1,0 +1,54 @@
+/*===============BASE=DEFAULTS/LAYOUT==========================*/
+.navbar {
+    background: transparent;
+    font-weight: 500;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    transition: all 0.5s;
+    width: 100%;
+    z-index: 999;
+}
+.navbar-solid {
+    background: #fafafa;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+.navbar-inner {
+    margin: 0 auto;
+    max-width: 1140px; /*fit with simple-grid max-width*/
+    padding: 0;
+    width: 95%;
+}
+.navbar-logo {
+    float: left;
+}
+.navbar-right {
+    float: right;
+}
+.nav-group {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-item {
+    display: inline-block;
+}
+/*===============MODULES=========================*/
+.potp-logo {
+    box-shadow: 0 0 12px #303030;
+    margin: 0;
+    transition: all 0.3s;
+    width: 80px;
+}
+.potp-logo[src*='logo-white']{
+    margin: 5px;
+    width: 100px;
+}
+.potp-logo:hover {
+    transform: scale(1.2);
+}
+/*===============LINKS===========================*/
+
+/*===============MOBILE BTN======================*/
+
+/*===============QUERIES=========================*/
