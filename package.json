@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/frndcolin/potp-site#readme",
   "devDependencies": {
+    "gulp": "^3.9.1",
     "gulp-concat-css": "^2.3.0",
     "gulp-watch": "^4.3.11",
     "path": "^0.12.7",

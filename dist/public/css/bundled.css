@@ -1,0 +1,465 @@
+/*
+    Primary file used to import modules and concat for production
+    1.resets
+    2.base
+      layout
+      nav
+      modules
+*/
+
+/*========#1 RESETS======*/
+
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document  EDITED FOR PERFORMANCE ON SITE
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.4;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+footer,
+header,
+nav,
+section,
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: 'Montserrat', sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.4;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*========#2 POTP STYLES======*/
+
+html {
+  height: 2000px;
+  margin: 0;
+  padding: 0;
+}
+
+/*++++++++REMOVE++++++++++++++++*/
+
+body {
+  background: #fafafa;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header {
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("../img/banner-bg-min.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+/*===============BASE=DEFAULTS/LAYOUT==========================*/
+
+.navbar {
+  background: transparent;
+  color: #fff;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  transition: all 0.2s;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar-solid {
+  background: #fafafa;
+  color: #2A57CC;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-inner {
+  margin: 0 auto;
+  max-width: 1140px;
+  /*fit with simple-grid max-width*/
+  padding: 0;
+  width: 95%;
+}
+
+.navbar-logo {
+  float: left;
+}
+
+.navbar-right {
+  float: right;
+}
+
+.nav-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-block;
+}
+
+/*===============MODULES=========================*/
+
+.potp-logo {
+  box-shadow: 0 0 8px #303030;
+  margin: 0;
+  transition: all 0.3s;
+  width: 100px;
+}
+
+.potp-logo[src*='logo-white'] {
+  box-shadow: none;
+  margin: 5px;
+  width: 120px;
+}
+
+.potp-logo:hover {
+  transform: scale(1.2) translateY(5px);
+}
+
+/*===============LINKS===========================*/
+
+.nav-item a:link,
+.nav-item a:visited {
+  color: inherit;
+  display: block;
+  padding: 18px 9px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.nav-item a:hover,
+.nav-item a:active,
+.navbar-solid .nav-item a:hover,
+.navbar-solid .nav-item a:active {
+  color: #fff;
+  background: #2A57CC;
+}
+
+/*===============MOBILE BTN======================*/
+
+.nav-btn {
+  display: none;
+}
+
+/*===============QUERIES=========================*/
+
+/*==========BANNER MODULES==========*/
+
+#banner-msg {
+  color: #fff;
+  padding: 15vh 0 0;
+  text-align: center;
+}
+
+.banner-nav {
+  list-style: none;
+  margin: 0 0 60px 0;
+  padding: 0;
+}
+
+.banner-nav-item {
+  display: inline-block;
+  font-weight: 500;
+  padding: 0 5px;
+}
+
+.banner-nav-item:nth-of-type(2n) {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.banner-nav-item a:link,
+.banner-nav-item a:visited {
+  color: #fafafa;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.banner-nav-item a:hover,
+.banner-nav-item a:active {
+  color: #F95700;
+}
+
+/*==========BUTTON MODULES==========*/
+
+.btn,
+.btn:link,
+.btn:visited {
+  background: transparent;
+  border: 3px solid #F95700;
+  border-radius: 5px;
+  color: #F95700;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.btn,
+.btn:hover,
+.btn:active {
+  background: #F95700;
+  border-color: #F95700;
+  color: #fff;
+}
+
+.cta-btn:link,
+.cta-btn:visited {
+  background-color: #fff;
+  border: 2px solid #FF7C30;
+  border-radius: 7px;
+  color: #FF7C30;
+  font-size: 1.1em;
+  font-weight: 400;
+  padding: 10px 18px;
+  text-decoration: none;
+  text-shadow: 0 0 5px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+}
+
+.cta-btn-full:link,
+.cta-btn-full:visited {
+  background-color: #FF7C30;
+  color: #fff;
+}
+
+.cta-btn:active,
+.cta-btn:hover,
+.cta-btn-full:active,
+.cta-btn-full:hover {
+  background-color: #F55D17;
+  border-color: #F55D17;
+  color: #fff;
+}
+
+h2,
+h3 {
+  font-weight: 400;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: -3px;
+  margin-bottom: 0;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.5),
+                 0 0 18px rgba(0, 0, 0, 0.6),
+                 0 0 28px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  text-indent: 2.5em;
+}
+
+/*
+@import 'layout.css';
+*/

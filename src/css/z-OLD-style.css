@@ -15,7 +15,7 @@ twr - #00b6f1 (0,182,241) #2290bf (34,144,191)
 /*-------------------- ELEMENT/GENERAL STYLES -----------------------------------*/
 body {
     color: #555;
-    font-family: 'Montserrat', sans-serif;
+    font-family:  'Montserrat', sans-serif;
     font-size: 16px;
     position: relative;
 }
@@ -45,7 +45,6 @@ h2:after {
     margin: 8px auto;
     width: 150px;
 }
-p { text-indent: 2.5em;}
 ul {
     list-style: none;
     padding: 0;

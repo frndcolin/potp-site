@@ -1,0 +1,25 @@
+html{ height: 2000px;
+    margin: 0;
+    padding: 0;
+} /*++++++++REMOVE++++++++++++++++*/
+body {
+    background: #fafafa;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+header {
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("../img/banner-bg-min.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}

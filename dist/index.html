@@ -15,7 +15,6 @@
         }
         gtag('js', new Date());
         gtag('config', 'UA-109028742-1');
-
     </script>
 
     <meta name="author" content="Colin Friend">
@@ -24,9 +23,9 @@
 
     <title>Part of the Pack</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="public/css/simple-grid.css">
-    <link rel="stylesheet" type="text/css" href="css/bundled.css">
+    <link rel="stylesheet" type="text/css" href="public/css/bundled.css">
 
     <script src="https://use.fontawesome.com/6de892528c.js"></script>
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
@@ -34,41 +33,80 @@
 
 <body>
     <header id="home">
-        <nav id="potp-main-nav">
-            <div class="nav-inner">
-                <div class="nav-header">
-                    <button type="button" class="toggle-slide" aria-expanded="false">
+        <nav class="navbar">
+            <div class="navbar-inner">
+                <div class="navbar-logo">
+                    <button type="button" class="nav-btn toggle-slide" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <i class="fa fa-paw"></i>
                     </button>
-                    <a class="navbar-logo" href="#home"><img id="nav-logo" src="public/img/logo/logo-white.svg" alt="part of the pack logo"></a>
+                    <a href="#home"><img class="potp-logo" src="public/img/logo/logo-white.svg" alt="part of the pack logo"></a>
                 </div>
-                <div id="potp-nav">
-                    <ul class="nav-list">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#service">Services</a></li>
-                        <li><a href="#pack-gallery">The Pack</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
+                <div class="navbar-right">
+                    <ul class="nav-group">
+                        <li class="nav-item"><a href="#about">About Us</a></li>
+                        <li class="nav-item"><a href="#service">Services</a></li>
+                        <li class="nav-item"><a href="#pack-gallery">The Pack</a></li>
+                        <li class="nav-item"><a href="#contact">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div id="banner-msg">
             <h1>What can the pack<br>do for you?</h1>
-            <ul>
-                <li><a class="banner-nav" href="#service">pet visits</a></li>
-                <li><a class="banner-nav" href="#service">dog walking</a></li>
-                <li><a class="banner-nav" href="#service">pet sitting</a></li>
+            <ul class="banner-nav">
+                <li class="banner-nav-item"><a href="#service">pet visits</a></li>
+                <li class="banner-nav-item"><a href="#service">dog walking</a></li>
+                <li class="banner-nav-item"><a href="#service">pet sitting</a></li>
             </ul>
-            <a id="banner-btn" class="cta-btn cta-btn-full" href="#service">Learn more</a>
+            <a id="banner-btn" class="btn btn-full" href="#service">Learn more</a>
         </div>
     </header>
+    <main>
+        <section id="welcome">
+            <div class="grid grid-pad">
+                <div class="col-4-12">
+                    <div class="content">
+                        <blockquote class="left">
+                            Having Part of the Pack take care of Princess is like sending her to the dog spa. Princess gets spoiled with lots of attention, long walks, and play. In terms of health, Princess gets appropriate amounts of food and treats. I highly recommend Part of the Pack for reliable pet care. <br>
+                            <img src="public/img/quotes/Daisy-quote-min.png">
+                            <cite>Susanne R.</cite>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="col-8-12">
+                        <h2>Welcome</h2>
+                        <p>
+                            Part of the Pack is experienced pet care for Lower Cape Cod, MA. The Pack is fully insured and a member of
+                            <a href="http://www.petsitllc.com/" target="_blank">Pet Sitters Associates</a>. We will work with you to provide the care your pet needs! We offer dog walking, short-term pet-sitting, check-in visits, small animal care, and we're open to new ideas to fit the needs of our customers. Our goal is to get to know you and your animals well. We want to form working relationships with you, and we want to make your pets a part of our pack!
+                        </p>
+                        <div class="grid">
+                            <div class="col-1-1">
+                                <div class="social-links">
+                                    <h3>check us out!</h3>
+                                    <ul class="social-icon-group">
+                                        <li><a href="https://www.facebook.com/partofthepackdogs/" target="_blank"><i class="social-icon fa fa-facebook-square"></i></a></li>
+                                        <!--<li><a href="https://www.facebook.com/partofthepackdogs/" target="_blank"><i class="social-icon fa fa-twitter-square"></i></li>-->
+                                        <li><a href="https://www.instagram.com/partofthepackdogs/" target="_blank"><i class="social-icon fa fa-instagram fa-ig-gradient"></i></a></li>
+                                        <li><a href="https://www.yelp.com/biz/part-of-the-pack-south-yarmouth" target="_blank"><i class="social-icon fa fa-yelp"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src='../src/js/potp.js'></script>
 
     <script type="text/javascript">
         (function() {
             emailjs.init("user_Z2IB0LrxE6GwdMpT5wyDR");
         })();
-
     </script>
 </body>
 

@@ -1,0 +1,72 @@
+/*==========BANNER MODULES==========*/
+#banner-msg {
+    color: #fff;
+    padding: 15vh 0 0;
+    text-align: center;
+}
+.banner-nav {
+    list-style: none;
+    margin: 0 0 60px 0;
+    padding: 0;
+}
+.banner-nav-item {
+    display: inline-block;
+    font-weight: 500;
+    padding: 0 5px;
+}
+.banner-nav-item:nth-of-type(2n) {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.banner-nav-item a:link,
+.banner-nav-item a:visited {
+    color: #fafafa;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.banner-nav-item a:hover,
+.banner-nav-item a:active {
+    color: #F95700;
+}
+
+/*==========BUTTON MODULES==========*/
+.btn, .btn:link, .btn:visited {
+    background: transparent;
+    border: 3px solid #F95700;
+    border-radius: 5px;
+    color: #F95700;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+.btn, .btn:hover, .btn:active {
+    background: #F95700;
+    border-color: #F95700;
+    color: #fff;
+}
+
+.cta-btn:link, .cta-btn:visited {
+    background-color: #fff;
+    border: 2px solid #FF7C30;
+    border-radius: 7px;
+    color: #FF7C30;
+    font-size: 1.1em;
+    font-weight: 400;
+    padding: 10px 18px;
+    text-decoration: none;
+    text-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+.cta-btn-full:link, .cta-btn-full:visited {
+    background-color: #FF7C30;
+    color: #fff;
+}
+.cta-btn:active, .cta-btn:hover,
+.cta-btn-full:active, .cta-btn-full:hover {
+    background-color: #F55D17;
+    border-color: #F55D17;
+    color: #fff;
+}

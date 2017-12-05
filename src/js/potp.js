@@ -41,16 +41,16 @@ $(document).ready(function(){
     
     function watchScroll(e){
         var pagePosY = window.scrollY;  
-        var navbar = document.getElementById('potp-main-nav');
-        var navList = document.getElementById('potp-nav')
-        var logo = document.getElementById('nav-logo');
+        var navbar = document.querySelector('.navbar');
+        var navList = document.querySelector('.nav-group')
+        var logo = document.querySelector('.potp-logo');
         
         if(pagePosY < 200) {
-            navbar.classList.remove('solid');
+            navbar.classList.remove('navbar-solid');
             logo.setAttribute('src', whiteLogo);
             navBtn.style.border = '2px solid #FFF';
         }else {
-            navbar.classList.add('solid');
+            navbar.classList.add('navbar-solid');
             logo.setAttribute('src', blueLogo);
             navBtn.style.border = '2px solid #2A57CC';
         }

@@ -10,7 +10,12 @@
 @import 'normalize-edited.css';
 
 /*========#2 POTP STYLES======*/
+
 @import 'base.css';
-@import 'layout.css';
 @import 'nav.css';
 @import 'modules.css';
+@import 'text.css';
+
+/*
+@import 'layout.css';
+*/

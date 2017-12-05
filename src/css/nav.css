@@ -1,16 +1,17 @@
 /*===============BASE=DEFAULTS/LAYOUT==========================*/
 .navbar {
     background: transparent;
-    font-weight: 500;
+    color: #fff;
     height: 60px;
     position: fixed;
     top: 0;
-    transition: all 0.5s;
+    transition: all 0.2s;
     width: 100%;
     z-index: 999;
 }
 .navbar-solid {
     background: #fafafa;
+    color: #2A57CC;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
 .navbar-inner {
@@ -35,20 +36,38 @@
 }
 /*===============MODULES=========================*/
 .potp-logo {
-    box-shadow: 0 0 12px #303030;
+    box-shadow: 0 0 8px #303030;
     margin: 0;
     transition: all 0.3s;
-    width: 80px;
-}
-.potp-logo[src*='logo-white']{
-    margin: 5px;
     width: 100px;
 }
+.potp-logo[src*='logo-white']{
+    box-shadow: none;
+    margin: 5px;
+    width: 120px;
+}
 .potp-logo:hover {
-    transform: scale(1.2);
+    transform: scale(1.2) translateY(5px);
 }
 /*===============LINKS===========================*/
+.nav-item a:link,
+.nav-item a:visited {
+    color: inherit;
+    display: block;
+    padding: 18px 9px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.nav-item a:hover,
+.nav-item a:active,
+.navbar-solid .nav-item a:hover,
+.navbar-solid .nav-item a:active {
+    color: #fff;
+    background: #2A57CC;
+}
 
 /*===============MOBILE BTN======================*/
-
+.nav-btn {
+    display: none;
+}
 /*===============QUERIES=========================*/

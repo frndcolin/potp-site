@@ -1,0 +1,18 @@
+h2, h3 {
+    font-weight: 400;
+    text-align: center;
+}
+h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: -3px;
+    margin-bottom: 0;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5),
+                 0 0 18px rgba(0, 0, 0, 0.6),
+                 0 0 28px rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+}
+h2 { font-size: 2rem;}
+h3 { font-size: 1.5rem;}
+
+p {text-indent: 2.5em}
