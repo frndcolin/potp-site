@@ -1,0 +1,25 @@
+{
+  "name": "part-of-the-pack",
+  "version": "1.0.0",
+  "description": "part of the pack live site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frndcolin/potp-site.git"
+  },
+  "author": "Colin Friend",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frndcolin/potp-site/issues"
+  },
+  "homepage": "https://github.com/frndcolin/potp-site#readme",
+  "devDependencies": {
+    "gulp-concat-css": "^2.3.0",
+    "gulp-watch": "^4.3.11",
+    "path": "^0.12.7",
+    "webpack": "^3.10.0"
+  }
+}
