@@ -1,4 +1,4 @@
-html{ height: 2000px;
+html{
     margin: 0;
     padding: 0;
 } /*++++++++REMOVE++++++++++++++++*/
@@ -22,4 +22,39 @@ header {
     padding: 0;
     position: relative;
     width: 100%;
+}
+section {
+    padding: 60px 0;
+}
+blockquote {
+    border-width: 0;
+    font-size: 0.8em;
+    position: relative;
+}
+blockquote::before {
+    color: #FFF;
+    content: "\201C";
+    display: block;
+    font-size: 4.5em;
+    left: -25px;
+    position: absolute;
+    top: -30px;
+    transform: rotate(5deg);
+}
+blockquote img {
+    border-radius: 50%;
+    display: block;
+    float: left;
+    height: 75px;
+    margin: 0 10px 0 20px;
+    width: 75px;
+}
+cite {
+    display: block;
+    font-size: 1em;
+    margin-top: 30px;
+}
+#about {
+    background: #3D66D0;
+    color: #fafafa;
 }
