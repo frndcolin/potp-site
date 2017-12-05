@@ -4,9 +4,9 @@ $(document).ready(function(){
     
     function toggleSlide(e){
         e.preventDefault();
-        var $btn  = $(".nav-header button");
-        var $nav  = $("#potp-nav");
-        var $list = $(".nav-list");
+        var $btn  = $(".navbar button");
+        var $nav  = $(".navbar-right");
+        var $list = $(".nav-group");
         
         $nav.toggleClass("slide");
         
@@ -36,7 +36,7 @@ $(document).ready(function(){
     //==============Vanilla Script====================================
     //----------------------------------------------------------------
     
-    var navBtn = document.querySelector('.nav-header button');
+    var navBtn = document.querySelector('.navbar-logo button');
     var anchors = document.querySelectorAll('a[href*="#"]');
     
     function watchScroll(e){

@@ -42,7 +42,7 @@
     text-transform: uppercase;
     transition: all 0.3s;
 }
-.btn-full {
+.btn.btn-full {
     background: #F96617;
     border-color: #F96617;
     color: #fff;
