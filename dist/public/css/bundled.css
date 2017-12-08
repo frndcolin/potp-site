@@ -126,7 +126,7 @@ footer hr {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .nav-item {
@@ -402,6 +402,7 @@ footer hr {
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+  width: 246px;
 }
 
 .rachel-img {
@@ -493,13 +494,15 @@ footer hr {
 
 .img-gallery {
   list-style: none;
+  margin: 0;
+  padding: 0;
   width: 100%;
   text-align: center;
 }
 
 .gallery-item {
   display: inline-block;
-  margin: 12px 4px;
+  margin: 12px 6px;
   height: 180px;
   position: relative;
   transition-delay: 2s;
@@ -508,7 +511,7 @@ footer hr {
 }
 
 .thumbnail {
-  border: 4px solid #fff;
+  border: 4px solid #fcfcfc;
   border-radius: 3px;
   box-shadow: 0 0 8px #999;
   width: 100%;
@@ -525,7 +528,7 @@ footer hr {
   position: absolute;
   text-align: center;
   text-transform: uppercase;
-  top: 90%;
+  top: 95%;
   width: 100%;
 }
 
@@ -572,13 +575,18 @@ footer hr {
   color: #333;
 }
 
+#contact a:hover,
+#contact a:active {
+  color: #2A57CC;
+}
+
 #contact-form {
   background-color: #EBEFFA;
   border-radius: 7px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2), 0 0 16px rgba(0, 0, 0, 0.1);
   color: inherit;
   margin: 0 auto;
-  padding: 6px 0;
+  padding: 8px;
   width: 100%;
 }
 
@@ -599,8 +607,8 @@ footer hr {
 
 fieldset {
   border: none;
-  margin: 0;
-  padding: 4px 16px;
+  margin: 0 auto;
+  width: 90%;
 }
 
 label,
@@ -608,7 +616,7 @@ input,
 select {
   display: block;
   font-size: 1rem;
-  width: 100%;
+  width: 95%;
 }
 
 input,

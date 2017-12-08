@@ -30,7 +30,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .nav-item {
     display: inline-block;
