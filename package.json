@@ -19,6 +19,8 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat-css": "^2.3.0",
+    "gulp-sitemap": "^4.2.0",
+    "gulp-sourcemaps": "^2.6.1",
     "gulp-watch": "^4.3.11",
     "path": "^0.12.7",
     "webpack": "^3.10.0"

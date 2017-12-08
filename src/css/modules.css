@@ -12,7 +12,7 @@
 .banner-nav-item {
     display: inline-block;
     font-weight: 500;
-    padding: 0 5px;
+    padding: 0 10px;
 }
 .banner-nav-item:nth-of-type(2n) {
     border-left: 1px solid #fff;
@@ -28,28 +28,43 @@
 .banner-nav-item a:active {
     color: #F95700;
 }
-
+#banner-btn {
+    bottom: 140px;
+    left: 45%;
+    padding: 5px 30px;
+    position: absolute;
+}
+#banner-btn span {
+    display: none;
+    font-size: 0.8rem;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: all 3s !important;
+}
+#banner-btn:hover span { display: block}
 /*==========BUTTON MODULES==========*/
 .btn, .btn:link, .btn:visited {
     background: transparent;
-    border: 3px solid #F96617;
-    border-radius: 5px;
-    color: #F95700;
+    border: 2px solid #FF6E00;
+    border-radius: 7px;
+    color: #FF6E00;
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 500;
     padding: 10px 30px;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.3s;
 }
 .btn.btn-full {
-    background: #F96617;
-    border-color: #F96617;
-    color: #fff;
+    background: #FF6E00;
+    border-color: #FF6E00;
+    color: #fafafa;
 }
 .btn:hover, .btn:active {
-    background: #F95700;
-    border-color: #F95700;
+    background: #F2600C;
+    border-color: #F2600C;
     color: #fff;
 }
 
@@ -111,6 +126,13 @@
 }
 
 /*=============ABOUT IMGS===================*/
+#about {
+    background: #6486DB;
+    color: #fafafa;
+}
+#about h2:after {
+    background-color: #fff;
+}
 #about-img-container {
     padding: 20px 0;
     position: relative;
@@ -136,11 +158,11 @@
 }
 .tag-container {
     background-color: #fff;
-    border: 10px solid #fff;
+    border: 5px solid #fff;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     color: #555;
-    font-size: 22px;
+    font-size: 1.2rem;
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
@@ -158,7 +180,7 @@
 }
 .riley-img {
     position: absolute;
-    right: 60px;
+    right: 40px;
     top: 260px;
     transform: rotate(20deg);
     transition: all 0.3s;
@@ -170,7 +192,7 @@
 }
 
 /*=====================SERVICE CARDS===========================*/
-#service { background-color: #F0F4FF;}
+#service { background-color: #EAF0FF;}
 #service p { margin-top: 24px;}
 .service-card {
     background: #fff;
@@ -197,7 +219,7 @@
     color: #FF7C30; 
     display: block;
     font-size: 0.9em;
-    font-weight: 300;
+    font-weight: 400;
 }
 .service-list {
     padding: 0;
@@ -209,137 +231,170 @@
     margin: 12px 0;
 }
 .fa-check {
-    color: #FF7C30;
+    color: #FF6E00;
     margin: 0 7px 0 0;
 }
 
-/**/
+/*==========================IMG GALLERY====================*/
 .img-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
     list-style: none;
     width: 100%;
+    text-align: center;
 }
-.img-gallery li { 
-    border: 1px solid #f3f3f3;
-    box-shadow: 0 0 18px #CCC;
-    float: left;
-    margin: 12px 6px;
-    padding: 2px;
+.gallery-item { 
+    display: inline-block;
+    margin: 12px 4px;
     height: 180px;
-    transition: transform 0.3s;
+    position: relative;
+    transition-delay: 2s;
+    transition: all 0.3s;
     width: 200px;
 }
-.img-gallery li:hover {
+.thumbnail {
+    border: 4px solid #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 8px #999;
+    width: 100%
+}
+.pet-name {
+    background: rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #fff;
+    border-right: 4px solid #fff;
+    color: #fafafa;
+    display: none;
+    font-size: 1rem;
+    font-weight: 500;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 90%;
+    width: 100%;
+}
+.pet-name i {
+    font-size: 0.8rem;
+    padding-bottom: 5px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+.gallery-item:hover {
     border: none;
     box-shadow: none;
     transform: scale(1.5);
+    z-index: 333;
 }
-.thumbnail img {
-    width: 100%
+.gallery-item:hover .pet-name {
+    display: block;
 }
-
-/**/
+/*===========================CONTACT===========================*/
 #contact {
-    background: #fff;
-    background-image:  url("../img/contact-bg-min.png");
-    background-position: left;
+    background: #fdfdfd;
+    background-image:  url("../img/contact-img.png");
+    background-position: 30% 100%;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 60%;
 }
 #contact-msg p {
     margin-top: 20px;
     padding: 0 10px;
 }
+#contact a {
+    padding-left: 5px;
+    text-decoration: none;
+}
+#contact a:link, #contact a:visited {
+    color: #333;
+}
 #contact-form {
     background-color: #EBEFFA;
-    border-radius: 15px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3), 0 0 16px rgba(0, 0, 0, 0.3);
-    color: #303030;
-    margin: 4px auto;
-    padding: 20px 0;
+    border-radius: 7px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2), 0 0 16px rgba(0, 0, 0, 0.1);
+    color: inherit;
+    margin: 0 auto;
+    padding: 6px 0;
     width: 100%;
 }
-#contact-form h3 { margin: 10px 0;}
+#contact-form h3 { 
+    color: #2A57CC; 
+    font-weight: 500;
+    margin: 4px 0 0 0;}
 #contact-form h3:after {
     background-color: #2A57CC;
     content: "";
     display: block;
     height: 1.5px;
-    margin: 8px auto 24px;
-    width: 150px;
+    margin: 4px auto;
+    width: 80%;
 }
 fieldset {
     border: none;
+    margin: 0;
+    padding: 4px 16px;
 }
-input, select {
+label, input, select { 
+    display: block;
+    font-size: 1rem;
+    width: 100%;
+}
+input, select, textarea {
     border: 1px solid #cfcfcf;
     border-radius: 5px;
     padding: 5px;
 }
 textarea {
+    font-size: 14px;
+    height: 120px;
+    overflow-x: hidden;
+    resize: none;
     width: 100%;
 }
 #contact-form button {
-    background-color: #fff;
-    border: 2px solid #FF7C30;
-    border-radius: 7px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.2);
-    color: #FF7C30;
     display: block;
-    font-size: 1.1em;
-    height: 40px;
     margin: 0 auto;
-    padding: 3px 18px;
-    text-decoration: none;
-    text-shadow: 0 0 8px rgba(0,0,0,0.2);
-    transition: all 0.3s;
+    font-weight: 600;
 }
-#contact-form button:hover {
-    background-color: #FF7C30;
-    color: #fff;
-}
-#contact-form button:active { background-color: #F55D17;}
 
 /*=============FOOTER========================*/
-.footer-top {
-    background: #0A1633;
+.footer-bottom {
+    background: #121212;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
 }
 .footer-group {
     list-style: none;
     margin: 0;
-    padding: 20px 0 10px;
+    padding: 0 0 10px 0;
     text-align: center;
 }
-.footer-top .footer-group { padding: 0;}
+.footer-bottom .footer-group { padding: 0;}
+.footer-bottom .footer-item { margin: 16px 0;}
 .footer-item {
     font-size: 1.02rem;
     font-weight: 500;
     display: block;
     letter-spacing: 1px;
-    margin: 0 5px;
+    margin: 0;
     transition: all 0.2s;    
 }
 .footer-icon {
     display: inline-block;
-    font-size: 3rem;
-    margin: 0 5px;
+    font-size: 2.5rem;
+    margin: 0 20px;
     transition: all 0.2s;
 }
 .in-ln {
     display: inline-block;
 }
 .footer-item a{
-    color: #999;
-    margin: 10px;
+    color: #ddd;
+    cursor: pointer;
+    margin: 0 15px;
     text-decoration: none;
 }
-.footer-item a:link, .footer a:visited { color: #999}
+.footer-item a:link, .footer a:visited { color: #ddd}
 .footer-item a:hover, .footer a:active { color: #2A57CC}
 
-.footer-icon i { color: #999}
+.footer-icon i { color: #ddd}
 .footer-icon .fa-facebook-square:hover { color: #4C5fd7;}
 .footer-icon .fa-twitter-square:hover { color: #2290bf;}
 .footer-icon .fa-yelp:hover { color: #ff0000;}

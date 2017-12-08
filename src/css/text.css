@@ -19,7 +19,7 @@ h2:after {
     content: "";
     display: block;
     height: 2px;
-    margin: 8px auto;
+    margin: 4px auto;
     width: 150px;
 }
 
@@ -32,4 +32,15 @@ p {
 
 .no-margin {
     margin: 0;
+}
+.txt-center {
+    text-align: center;
+}
+.txt-left {
+    padding-left: 15px;
+    text-align: left !important;
+}
+.txt-right {
+    padding-right: 15px;
+    text-align: right !important;
 }
