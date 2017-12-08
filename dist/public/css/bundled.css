@@ -289,6 +289,13 @@ cite {
   color: #fafafa;
 }
 
+footer {
+  background: #081128;
+  color: #fafafa;
+  font-size: 0.9rem;
+  padding: 0 0 60px 0;
+}
+
 /*===============BASE=DEFAULTS/LAYOUT==========================*/
 
 .navbar {
@@ -768,6 +775,85 @@ textarea {
 
 #contact-form button:active {
   background-color: #F55D17;
+}
+
+/*=============FOOTER========================*/
+
+.footer-top {
+  background: #0A1633;
+}
+
+.footer-group {
+  list-style: none;
+  margin: 0;
+  padding: 20px 0 10px;
+  text-align: center;
+}
+
+.footer-top .footer-group {
+  padding: 0;
+}
+
+.footer-item {
+  font-size: 1.02rem;
+  font-weight: 500;
+  display: block;
+  letter-spacing: 1px;
+  margin: 0 5px;
+  transition: all 0.2s;
+}
+
+.footer-icon {
+  display: inline-block;
+  font-size: 3rem;
+  margin: 0 5px;
+  transition: all 0.2s;
+}
+
+.in-ln {
+  display: inline-block;
+}
+
+.footer-item a {
+  color: #999;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.footer-item a:link,
+.footer a:visited {
+  color: #999;
+}
+
+.footer-item a:hover,
+.footer a:active {
+  color: #2A57CC;
+}
+
+.footer-icon i {
+  color: #999;
+}
+
+.footer-icon .fa-facebook-square:hover {
+  color: #4C5fd7;
+}
+
+.footer-icon .fa-twitter-square:hover {
+  color: #2290bf;
+}
+
+.footer-icon .fa-yelp:hover {
+  color: #ff0000;
+}
+
+.footer-icon .fa-snapchat-square:hover {
+  color: rgba(255, 210, 0, 1);
+}
+
+.footer-icon .fa-instagram:hover {
+  background: linear-gradient(#4C5fd7, #7232bd, #c32aa3, #ffdc7d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h2,
