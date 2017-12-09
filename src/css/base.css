@@ -37,9 +37,9 @@ blockquote::before {
     content: "\201C";
     display: block;
     font-size: 4.5em;
-    left: -25px;
+    left: -28px;
     position: absolute;
-    top: -30px;
+    top: -35px;
     transform: rotate(5deg);
 }
 blockquote img {

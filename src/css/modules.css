@@ -31,19 +31,19 @@
 #banner-btn {
     bottom: 140px;
     left: 45%;
-    padding: 5px 30px;
+    line-height: 1;
+    padding: 8px 30px 4px;
     position: absolute;
 }
 #banner-btn span {
-    display: none;
+    display: block;
     font-size: 0.8rem;
     line-height: 0;
-    margin: 0;
+    margin: 2px 0 0 0;
     padding: 0;
     text-align: center;
     transition: all 3s !important;
 }
-#banner-btn:hover span { display: block}
 /*==========BUTTON MODULES==========*/
 .btn, .btn:link, .btn:visited {
     background: transparent;
@@ -69,27 +69,46 @@
 }
 
 /*===========QUOTES BOX=====================*/
+.quotes {
+    position: relative;
+}
 .quote {
     background: #2A57CC;
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.2), -4px 2px 12px rgba(0, 0, 0, 0.3);
     color: #fafafa;
-    margin: 40px 0;
-    padding: 40px 0;
-    position: relative;
-}
-.quote::after {
-    display: block;
-    content: '';
-    background: #2A57CC;
-    height: 250px;
-    width: 300px;
-    position: absolute;
+    height: 260px;
     left: -20px;
+    margin: 0;
+    opacity: 1;
+    padding: 30px 0;
+    position: absolute;
     top: -20px;
-    overflow: visible;
-    z-index: -1
+    transition: all 0.5s;
+    width: 350px;
 }
-
+.quote.next {
+    z-index: 11;
+}
+.quote.show {
+    opacity: 1;
+    animation-name: show-quote;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.3,0.3,0.5,0.2);
+}
+.quote.hide {
+    opacity: 0;
+}
+@keyframes show-quote {
+    0% {   left: -20px; top: -20px;}
+    15% {  left: -25px; top: -25px;}
+    30% {  left: -30px; top: -30px;}
+    45% {  left: -35px; top: -35px;}
+    60% {  left: -40px; top: -40px; z-index: 22}
+    75% {  left: -20px; top: -20px; z-index: 22}
+    90% {  left: -10px; top: -10px; z-index: 22}
+    100% { left: 0;     top: 0; z-index: 22}
+}
 /*=============ICONS=====================*/
 .social-links {
     text-align: center;
@@ -315,7 +334,7 @@
     border-radius: 7px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2), 0 0 16px rgba(0, 0, 0, 0.1);
     color: inherit;
-    margin: 0 auto;
+    margin: 20px auto 0;
     padding: 8px;
     width: 100%;
 }
@@ -334,31 +353,41 @@
 fieldset {
     border: none;
     margin: 0 auto;
+    padding: 5px 0;
     width: 90%;
 }
-label, input, select { 
+label, input { 
     display: block;
     font-size: 1rem;
     width: 95%;
 }
+select {
+    font-family: inherit;
+    font-size: 1rem;
+    width: 50%;
+}
 input, select, textarea {
     border: 1px solid #cfcfcf;
     border-radius: 5px;
-    padding: 5px;
+    padding: 6px;
 }
 textarea {
     font-size: 14px;
     height: 120px;
     overflow-x: hidden;
     resize: none;
-    width: 100%;
+    width: 95%;
 }
 #contact-form button {
+    background: #fafafa;
     display: block;
     margin: 0 auto;
-    font-weight: 600;
+    font-weight: 500;
 }
-
+#contact-form button:hover {
+    background: #F2600C;
+    border-color: #F2600C;
+}
 /*=============FOOTER========================*/
 .footer-bottom {
     background: #121212;
@@ -373,7 +402,10 @@ textarea {
     text-align: center;
 }
 .footer-bottom .footer-group { padding: 0;}
-.footer-bottom .footer-item { margin: 16px 0;}
+.footer-bottom .footer-item { 
+    font-size: 14px;
+    margin: 20px 0;
+}
 .footer-item {
     font-size: 1.02rem;
     font-weight: 500;
@@ -381,6 +413,9 @@ textarea {
     letter-spacing: 1px;
     margin: 0;
     transition: all 0.2s;    
+}
+.copyright {
+    cursor: default;
 }
 .footer-icon {
     display: inline-block;

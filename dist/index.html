@@ -22,6 +22,7 @@
     <meta name="keywords" content="dog walking, pet sitting, pet care, pet visits, Cape Cod">
 
     <title>Part of the Pack</title>
+    <link rel="icon" href="favicon.ico">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="public/css/simple-grid.css">
@@ -66,13 +67,28 @@
         <section id="welcome">
             <div class="grid grid-pad">
                 <div class="col-4-12">
-                    <div class="quote">
-                        <div class="quote-bg"></div>
-                        <blockquote>
-                            Having Part of the Pack take care of Princess is like sending her to the dog spa. Princess gets spoiled with lots of attention, long walks, and play. In terms of health, Princess gets appropriate amounts of food and treats. I highly recommend Part of the Pack for reliable pet care. <br>
-                            <img src="public/img/quotes/Daisy-quote-min.png">
-                            <cite>Susanne R.</cite>
-                        </blockquote>
+                    <div class="quotes">
+                        <div class="quote show">
+                            <blockquote>
+                                Having Part of the Pack take care of Princess is like sending her to the dog spa. Princess gets spoiled with lots of attention, long walks, and play. In terms of health, Princess gets appropriate amounts of food and treats. I highly recommend Part of the Pack for reliable pet care. <br>
+                                <img src="public/img/quotes/Daisy-quote-min.png">
+                                <cite>Susanne R.</cite>
+                            </blockquote>
+                        </div>
+                        <div class="quote">
+                            <blockquote>
+                                Always on time, trustworthy, and enthusiastic. I would recommend Part of the Pack not only for dog walking, but any pet care you may need. Part of the Pack has the finest standards and work ethics. <br>
+                                <img src="public/img/quotes/Louie-quote-min.png">
+                                <cite>Sherri O.</cite>
+                            </blockquote>
+                        </div>
+                        <div class="quote">
+                            <blockquote class="right">
+                                Part of the Pack watched my 5 Rats and Crested Gecko for 2 months while I was relocated due to a power outage caused by a fire. They were amazing with them! Very cooperative and friendly. I would recommend Part of the Pack for any pet sitting needs. <br>
+                                <img src="public/img/quotes/mouse-quote-min.png">
+                                <cite>Kelcie K.</cite>
+                            </blockquote>
+                        </div>
                     </div>
                 </div>
                 <div class="col-8-12">
@@ -250,7 +266,7 @@
 
         <section id="contact">
             <div class="grid">
-                <div id="contact-msg" class="col-8-12">
+                <div id="contact-msg" class="col-7-12">
                     <h2>We're here to help</h2>
                     <p>
                         Part of the Pack is ready to help you with your pet care needs. We'd like to know more about you and your pet so we can provide the right services. Join the Pack today, consultations are FREE! Arrange a date and time for a consult or contact us with any questions.</p>
@@ -258,7 +274,7 @@
                         email: <a href="#">partofthepackdogs@gmail.com</a><br> call: <a href="tel:508-280-9021">508-280-9021</a></p>
 
                 </div>
-                <div class="col-4-12">
+                <div class="col-5-12">
                     <div class="content">
                         <div id="contact-form">
                             <h3>Join the Pack!</h3>
@@ -321,7 +337,7 @@
             <div class="grid">
                 <div class="col-3-12">
                     <ul class="footer-group txt-left">
-                        <li class="footer-item in-ln">copyright</li>
+                        <li class="footer-item copyright"></li>
                     </ul>
                 </div>
                 <div class="col-6-12">
@@ -350,6 +366,32 @@
         (function() {
             emailjs.init("user_Z2IB0LrxE6GwdMpT5wyDR");
         })();
+    </script>
+    <script type="text/javascript">
+        var copy = document.querySelector('.copyright');
+        var d = new Date()
+        copy.innerHTML = 'Copyright &copy; Part of the Pack';
+    </script>
+
+    <script>
+        var quotes = document.querySelectorAll('.quote');
+
+        function showQuote() {
+            var current = 0;
+            quotes.forEach(function(quote, i) {
+                if (quote.classList.contains('show')) {
+                    current = i;
+                    quote.classList.add('hide');
+                    var repo = setTimeout(function(){
+                        quote.classList.remove('show');
+                        quote.classList.remove('hide');
+                    }, 1000);
+                }
+            });
+            quotes[(current + 1) % 3].classList.add('show');
+        }
+
+        var show = setInterval(showQuote, 4000);
     </script>
 </body>
 </html>
