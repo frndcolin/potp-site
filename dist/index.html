@@ -68,14 +68,14 @@
             <div class="grid grid-pad">
                 <div class="col-4-12">
                     <div class="quotes">
-                        <div class="quote show">
+                        <div class="quote active">
                             <blockquote>
                                 Having Part of the Pack take care of Princess is like sending her to the dog spa. Princess gets spoiled with lots of attention, long walks, and play. In terms of health, Princess gets appropriate amounts of food and treats. I highly recommend Part of the Pack for reliable pet care. <br>
                                 <img src="public/img/quotes/Daisy-quote-min.png">
                                 <cite>Susanne R.</cite>
                             </blockquote>
                         </div>
-                        <div class="quote">
+                        <div class="quote next">
                             <blockquote>
                                 Always on time, trustworthy, and enthusiastic. I would recommend Part of the Pack not only for dog walking, but any pet care you may need. Part of the Pack has the finest standards and work ethics. <br>
                                 <img src="public/img/quotes/Louie-quote-min.png">
@@ -83,7 +83,7 @@
                             </blockquote>
                         </div>
                         <div class="quote">
-                            <blockquote class="right">
+                            <blockquote>
                                 Part of the Pack watched my 5 Rats and Crested Gecko for 2 months while I was relocated due to a power outage caused by a fire. They were amazing with them! Very cooperative and friendly. I would recommend Part of the Pack for any pet sitting needs. <br>
                                 <img src="public/img/quotes/mouse-quote-min.png">
                                 <cite>Kelcie K.</cite>
@@ -373,25 +373,28 @@
         copy.innerHTML = 'Copyright &copy; Part of the Pack';
     </script>
 
+<!--  ==============================================================MOVE TO JS FILE=============================  -->
     <script>
         var quotes = document.querySelectorAll('.quote');
-
-        function showQuote() {
-            var current = 0;
-            quotes.forEach(function(quote, i) {
-                if (quote.classList.contains('show')) {
-                    current = i;
-                    quote.classList.add('hide');
-                    var repo = setTimeout(function(){
-                        quote.classList.remove('show');
-                        quote.classList.remove('hide');
-                    }, 1000);
-                }
-            });
-            quotes[(current + 1) % 3].classList.add('show');
+        
+        function moveQuote(q) {
+            if(q.classList.contains('active')){
+                q.classList.remove('active');
+            } else if(q.classList.contains('next')){
+                q.classList.add('active');
+                q.classList.remove('next');
+            } else {
+                q.classList.add('next');
+            }
         }
-
-        var show = setInterval(showQuote, 4000);
+        
+        function showQuote() {
+            quotes.forEach((quote) => {
+                moveQuote(quote);
+            });
+        }
+        
+        var show = setInterval(showQuote, 5000);
     </script>
 </body>
 </html>
