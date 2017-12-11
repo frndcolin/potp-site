@@ -75,35 +75,31 @@
 .quote {
     background: #2A57CC;
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.2), -4px 2px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
     color: #fafafa;
-    height: 260px;
-    left: 0;
+    height: 230px;
+    left: -20px;
     margin: 0;
-    opacity: 0;
-    padding: 30px 0;
+    padding: 20px 0 30px 0;
     position: absolute;
-    top: 0;
-    transition: all 2s;
+    top: -20px;
+    transition: all 1.5s;
     width: 350px;
-    z-index: 1;
+    z-index: 22
 }
 .quote:nth-child(2){
-    background: #FF6E00;
+    background: #5375EA;
 }
 .quote:nth-child(3){
     background: #6486DB;
 }
 .quote.next {
-    left: -25px;
-    opacity: 1;
-    top: -25px;
-    z-index: 21;
+    z-index: 23;
 }
 .quote.active {
-    opacity: 1;
     left: 0;
     top: 0;
-    z-index: 22;
+    z-index: 55
 }
 /*=============ICONS=====================*/
 .social-links {
@@ -262,11 +258,11 @@
 .gallery-item { 
     display: inline-block;
     margin: 12px 6px;
-    height: 180px;
+    height: 150px;
     position: relative;
     transition-delay: 2s;
     transition: all 0.3s;
-    width: 200px;
+    width: 180px;
 }
 .thumbnail {
     border: 4px solid #fcfcfc;
@@ -285,7 +281,7 @@
     position: absolute;
     text-align: center;
     text-transform: uppercase;
-    top: 95%;
+    top: 100%;
     width: 100%;
 }
 .pet-name i {
@@ -297,7 +293,7 @@
 .gallery-item:hover {
     border: none;
     box-shadow: none;
-    transform: scale(1.5);
+    transform: scale(1.8);
     z-index: 333;
 }
 .gallery-item:hover .pet-name {

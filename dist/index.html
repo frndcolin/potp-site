@@ -68,23 +68,23 @@
             <div class="grid grid-pad">
                 <div class="col-4-12">
                     <div class="quotes">
-                        <div class="quote active">
+                        <div class="quote animated active">
                             <blockquote>
-                                Having Part of the Pack take care of Princess is like sending her to the dog spa. Princess gets spoiled with lots of attention, long walks, and play. In terms of health, Princess gets appropriate amounts of food and treats. I highly recommend Part of the Pack for reliable pet care. <br>
+                                Having Part of the Pack take care of Princess is like sending her to the dog spa. Princess gets spoiled with lots of attention, long walks, and play. I highly recommend Part of the Pack for reliable pet care. <br>
                                 <img src="public/img/quotes/Daisy-quote-min.png">
                                 <cite>Susanne R.</cite>
                             </blockquote>
                         </div>
-                        <div class="quote next">
+                        <div class="quote animated next">
                             <blockquote>
-                                Always on time, trustworthy, and enthusiastic. I would recommend Part of the Pack not only for dog walking, but any pet care you may need. Part of the Pack has the finest standards and work ethics. <br>
+                                Always on time, trustworthy, and enthusiastic. I would recommend Part of the Pack not only for dog walking, but any pet care you may need. <br>
                                 <img src="public/img/quotes/Louie-quote-min.png">
                                 <cite>Sherri O.</cite>
                             </blockquote>
                         </div>
-                        <div class="quote">
+                        <div class="quote animated">
                             <blockquote>
-                                Part of the Pack watched my 5 Rats and Crested Gecko for 2 months while I was relocated due to a power outage caused by a fire. They were amazing with them! Very cooperative and friendly. I would recommend Part of the Pack for any pet sitting needs. <br>
+                                Part of the Pack watched my 5 Rats and Crested Gecko for 2 months while I was relocated due to a power outage caused by a fire. They were amazing with them, very cooperative and friendly!<br>
                                 <img src="public/img/quotes/mouse-quote-min.png">
                                 <cite>Kelcie K.</cite>
                             </blockquote>
@@ -98,7 +98,7 @@
                         <a href="http://www.petsitllc.com/" target="_blank">Pet Sitters Associates</a>. We will work with you to provide the care your pet needs! We offer dog walking, short-term pet-sitting, check-in visits, small animal care, and we're open to new ideas to fit the needs of our customers. Our goal is to get to know you and your animals well. We want to form working relationships with you, and we want to make your pets a part of our pack!
                     </p>
                     <div class="col-1-1 social-links">
-                        <h3 class="no-margin">check us out!</h3>
+                        <h3 class="no-margin animated">check us out!</h3>
                         <ul class="icon-group">
                             <li class="icon-group-item"><a href="https://www.facebook.com/partofthepackdogs/" target="_blank"><i class="social-icon fa fa-facebook-square"></i></a></li>
                             <!--<li><a href="https://www.facebook.com/partofthepackdogs/" target="_blank"><i class="social-icon fa fa-twitter-square"></i></li>-->
@@ -370,31 +370,50 @@
     <script type="text/javascript">
         var copy = document.querySelector('.copyright');
         var d = new Date()
-        copy.innerHTML = 'Copyright &copy; Part of the Pack';
+        copy.innerHTML = '&copy; ' + d.getFullYear() + ' Part of the Pack';
     </script>
 
 <!--  ==============================================================MOVE TO JS FILE=============================  -->
     <script>
         var quotes = document.querySelectorAll('.quote');
+        var chckUsOut = document.querySelector('h3.animated');
+        var timeOut;
         
-        function moveQuote(q) {
-            if(q.classList.contains('active')){
-                q.classList.remove('active');
-            } else if(q.classList.contains('next')){
-                q.classList.add('active');
-                q.classList.remove('next');
-            } else {
-                q.classList.add('next');
-            }
+        function moveQuotes(a, n, s) {
+            a.classList.add('rollout');
+            timeOut = setTimeout(()=>{ 
+                a.classList.remove('active'); 
+                a.classList.remove('rollout'); 
+            }, 1100);
+            
+            n.classList.add('active');
+            n.classList.remove('next');
+            s.classList.add('next');
         }
         
         function showQuote() {
-            quotes.forEach((quote) => {
-                moveQuote(quote);
+            var active, next, stage;
+            quotes.forEach((q) => {
+                if(q.classList.contains('active')){
+                    active = q;
+                } else if(q.classList.contains('next')){
+                    next = q;
+                } else {
+                    stage = q;
+                }    
             });
+            
+            moveQuotes(active, next, stage);
         }
         
         var show = setInterval(showQuote, 5000);
+        
+        chckUsOut.addEventListener('mouseover', function(){
+            this.classList.add('pulse');
+            timeOut = setTimeout(function(){
+                chckUsOut.classList.remove('pulse');
+            }, 10000);
+        });
     </script>
 </body>
 </html>

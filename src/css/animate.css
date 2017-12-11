@@ -1,0 +1,39 @@
+.animated {
+    animation-fill-mode: both;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+    
+}
+.pulse {
+    animation-duration: 1s;
+    animation-name: pulse;
+}
+
+@keyframes rotateOutDownRight {
+    from{
+        transform-origin: right bottom;
+        opacity: 1;
+        z-index: 55;
+    }
+    to{
+        transform-origin: right bottom;
+        transform: rotate3d(0, 0, 1, -45deg);
+        opacity: 0;
+        z-index: 55;
+    }
+}
+
+.rollout {
+    animation-duration: 1.5s;
+    animation-name: rotateOutDownRight;
+}
