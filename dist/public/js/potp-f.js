@@ -72,7 +72,7 @@ $(document).ready(function () {
 
     //evaluate each quote for stages in rotation/animation and shift accordingly
     function showQuote() {
-        quotes.forEach((q) => {
+        QUOTES.forEach((q) => {
             //if quote has class of active, add rollout, else moveon
             q.classList.toggle('rollout', q.classList.contains('active'));
             //if quote has class of next, replace it with active
