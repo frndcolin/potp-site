@@ -1,0 +1,13 @@
+/* AUTHOR */
+Designer/Developer: Colin Friend
+Github: frndcolin
+Location: North Carolina, US
+
+/* THANKS */
+
+
+/* SITE */
+Last Update: 2017/12/14
+Standards: HTML5, CSS3, ES6
+Components: simplegrid.css, normalize.css, emailjs
+Software: Brackets, Gulp.js, Surge.sh(hosting)

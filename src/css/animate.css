@@ -37,3 +37,86 @@
     animation-duration: 1.5s;
     animation-name: rotateOutDownRight;
 }
+
+.slide-in {
+    animation-duration: 0.5s;
+    animation-name: slideIn;
+    animation-timing-function: ease-in;
+    color: #2A57CC;
+}
+.slide-out {
+    animation-duration: 1s;
+    animation-name: slideOut;
+    animation-timing-function: ease-out;
+}
+
+@keyframes slideIn {
+    from { right: -220px;}
+    to { right: 0;}
+}
+
+@keyframes slideOut {
+    from { right: 0;}
+    to { right: -220px;}
+}
+
+
+/*=====================================NavButtonAnimations==========*/
+@keyframes rollIn {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        border: 2px solid #2A57CC;
+        color: #2A57CC;
+        right: 80px;
+        transform: rotate(-360deg);
+    }
+}
+@keyframes rollOut {
+    0% {
+        border-color: #2A57CC;
+        color: #2A57CC;
+        right: 80px;
+        transform: rotate(0deg);
+    }
+    100% {
+        border-color: inherit;
+        color: inherit;
+        right: 40px;
+        transform: rotate(360deg);
+    }
+}
+
+
+.roll-in {
+    animation-duration: 1s;
+    animation-name: rollIn;
+}
+.roll-out {
+    animation-duration: 1s;
+    animation-name: rollOut;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

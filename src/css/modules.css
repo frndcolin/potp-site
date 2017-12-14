@@ -29,20 +29,16 @@
     color: #F95700;
 }
 #banner-btn {
-    bottom: 140px;
-    left: 45%;
-    line-height: 1;
-    padding: 8px 30px 4px;
-    position: absolute;
+    display: inline-block;
+    margin-top: 40px;
 }
-#banner-btn span {
+#banner-btn span i {
     display: block;
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 0;
-    margin: 2px 0 0 0;
+    margin: 0;
     padding: 0;
     text-align: center;
-    transition: all 3s !important;
 }
 /*==========BUTTON MODULES==========*/
 .btn, .btn:link, .btn:visited {

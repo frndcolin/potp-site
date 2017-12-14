@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var path = require('path');
 var watch = require('gulp-watch');
+var sitemap = require('gulp-sitemap');
 var concatCss = require('gulp-concat-css');
 
 
@@ -13,8 +14,6 @@ gulp.task('watch-css', function () {
     });
 });
 
-var sitemap = require('gulp-sitemap');
- 
 gulp.task('sitemap', function () {
     gulp.src('dist/index.html', {
             read: false

@@ -22,7 +22,9 @@ body {
   font-weight: 400;
   line-height: 1.6;
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
+  position: relative;
   width: 100%;
 }
 
@@ -91,18 +93,21 @@ footer hr {
 
 /*===============BASE=DEFAULTS/LAYOUT==========================*/
 
-.navbar {
-  background: transparent;
-  color: #fff;
-  height: 60px;
+nav {
   position: fixed;
   top: 0;
+}
+
+.navbar {
+  background: transparent;
+  color: #fafafa;
+  height: 60px;
   transition: all 0.2s;
   width: 100%;
   z-index: 999;
 }
 
-.navbar-solid {
+.navbar.solid {
   background: #fafafa;
   color: #2A57CC;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
@@ -125,14 +130,20 @@ footer hr {
 }
 
 .nav-group {
+  background: #fff;
+  height: 100vh;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 70px 0 0;
+  position: absolute;
+  right: -220px;
   text-transform: capitalize;
+  width: 200px;
+  text-align: center;
 }
 
 .nav-item {
-  display: inline-block;
+  display: block;
 }
 
 /*===============MODULES=========================*/
@@ -160,7 +171,7 @@ footer hr {
 .nav-item a:visited {
   color: inherit;
   display: block;
-  padding: 18px 9px;
+  padding: 16px 9px;
   text-decoration: none;
   transition: all 0.2s;
 }
@@ -176,10 +187,89 @@ footer hr {
 /*===============MOBILE BTN======================*/
 
 .nav-btn {
-  display: none;
+  background: transparent;
+  border: 2px solid #fafafa;
+  border-radius: 7px;
+  color: #fafafa;
+  display: block;
+  font-size: 32px;
+  padding: 4px 10px;
+  position: absolute;
+  right: 40px;
+  top: 15px;
+  transition: all 0.3s;
+  z-index: 999;
+}
+
+.nav-btn:focus {
+  outline: none;
+}
+
+.nav-btn:hover {
+  transform: scale(1.03);
+}
+
+.navbar.solid .nav-btn {
+  border: 2px solid #2A57CC;
+  color: #2A57CC;
+  font-size: 26px;
+  right: 40px;
+  top: 8px;
 }
 
 /*===============QUERIES=========================*/
+
+@media screen and (min-width: 580px) {
+  .navbar-logo img[src*="potp-logo"] {
+    width: 100px;
+  }
+
+  .nav-btn {
+    font-size: 32px;
+    top: 7px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .nav-inner {
+    width: 90%;
+  }
+
+  .navbar-logo img[src*="logo-white"] {
+    margin: 5px 0;
+    width: 150px;
+  }
+
+  .navbar-logo img[src*="potp-logo"] {
+    width: 100px;
+  }
+
+  .navbar-logo img[src*="potp-logo"]:hover {
+    width: 110px;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .nav-group {
+    position: inherit;
+    background: transparent;
+    height: auto;
+    padding: 0;
+    width: inherit;
+  }
+
+  .nav-item {
+    float: left;
+    margin: 1em 3px;
+    width: auto;
+  }
+
+  .navbar.solid .nav-item {
+    margin: 0 5px;
+  }
+}
 
 /*==========BANNER MODULES==========*/
 
@@ -219,21 +309,17 @@ footer hr {
 }
 
 #banner-btn {
-  bottom: 140px;
-  left: 45%;
-  line-height: 1;
-  padding: 8px 30px 4px;
-  position: absolute;
+  display: inline-block;
+  margin-top: 40px;
 }
 
-#banner-btn span {
+#banner-btn span i {
   display: block;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 0;
-  margin: 2px 0 0 0;
+  margin: 0;
   padding: 0;
   text-align: center;
-  transition: all 3s !important;
 }
 
 /*==========BUTTON MODULES==========*/
@@ -859,4 +945,78 @@ p {
 .rollout {
   animation-duration: 1.5s;
   animation-name: rotateOutDownRight;
+}
+
+.slide-in {
+  animation-duration: 0.5s;
+  animation-name: slideIn;
+  animation-timing-function: ease-in;
+  color: #2A57CC;
+}
+
+.slide-out {
+  animation-duration: 1s;
+  animation-name: slideOut;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    right: -220px;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    right: 0;
+  }
+
+  to {
+    right: -220px;
+  }
+}
+
+/*=====================================NavButtonAnimations==========*/
+
+@keyframes rollIn {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    border: 2px solid #2A57CC;
+    color: #2A57CC;
+    right: 80px;
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rollOut {
+  0% {
+    border-color: #2A57CC;
+    color: #2A57CC;
+    right: 80px;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    border-color: inherit;
+    color: inherit;
+    right: 40px;
+    transform: rotate(360deg);
+  }
+}
+
+.roll-in {
+  animation-duration: 1s;
+  animation-name: rollIn;
+}
+
+.roll-out {
+  animation-duration: 1s;
+  animation-name: rollOut;
 }

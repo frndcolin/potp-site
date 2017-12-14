@@ -1,13 +1,12 @@
 <!Doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109028742-1"></script>
-    <script type="text/javascript">
+    <script>
         window.dataLayer = window.dataLayer || [];
 
         function gtag() {
@@ -15,14 +14,16 @@
         }
         gtag('js', new Date());
         gtag('config', 'UA-109028742-1');
+
     </script>
 
-    <meta name="author" content="Colin Friend">
+
     <meta name="description" content="Part of the Pack is a fully insured pet care service for Lower Cape Cod, MA. Dog walking, pet sitting, or pet visits. Part of the Pack is experienced with animals of all shapes and sizes. Join the Pack today!">
     <meta name="keywords" content="dog walking, pet sitting, pet care, pet visits, Cape Cod">
 
     <title>Part of the Pack</title>
     <link rel="icon" href="favicon.ico">
+    <link rel="author" href="humans.txt">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="public/css/simple-grid.css">
@@ -33,18 +34,19 @@
 </head>
 
 <body>
+
     <header id="home">
         <nav class="navbar">
             <div class="navbar-inner">
                 <div class="navbar-logo">
-                    <button type="button" class="nav-btn toggle-slide" aria-expanded="false">
+                    <button type="button" class="nav-btn animated" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <i class="fa fa-paw"></i>
                     </button>
                     <a href="#home"><img class="potp-logo" src="public/img/logo/logo-white.svg" alt="part of the pack logo"></a>
                 </div>
                 <div class="navbar-right">
-                    <ul class="nav-group">
+                    <ul class="nav-group animated">
                         <li class="nav-item"><a href="#about">About Us</a></li>
                         <li class="nav-item"><a href="#service">Services</a></li>
                         <li class="nav-item"><a href="#pack-gallery">The Pack</a></li>
@@ -55,13 +57,8 @@
         </nav>
         <div id="banner-msg">
             <h1>What can the pack<br>do for you?</h1>
-            <ul class="banner-nav">
-                <li class="banner-nav-item"><a href="#service">pet visits</a></li>
-                <li class="banner-nav-item"><a href="#service">dog walking</a></li>
-                <li class="banner-nav-item"><a href="#service">pet sitting</a></li>
-            </ul>
+            <a id="banner-btn" class="btn btn-full" href="#service">Learn more<span><i class="fa fa-chevron-down"></i></span></a>
         </div>
-        <a id="banner-btn" class="btn btn-full" href="#service">Learn more<span><i class="fa fa-chevron-down"></i></span></a>
     </header>
     <main>
         <section id="welcome">
@@ -362,58 +359,10 @@
     <script src='public/js/potp-f.js'></script>
     <script src='public/js/potp-mail.js'></script>
 
-    <script type="text/javascript">
+    <script>
         (function() {
             emailjs.init("user_Z2IB0LrxE6GwdMpT5wyDR");
         })();
-    </script>
-    <script type="text/javascript">
-        var copy = document.querySelector('.copyright');
-        var d = new Date()
-        copy.innerHTML = '&copy; ' + d.getFullYear() + ' Part of the Pack';
-    </script>
-
-<!--  ==============================================================MOVE TO JS FILE=============================  -->
-    <script>
-        var quotes = document.querySelectorAll('.quote');
-        var chckUsOut = document.querySelector('h3.animated');
-        var timeOut;
-        
-        function moveQuotes(a, n, s) {
-            a.classList.add('rollout');
-            timeOut = setTimeout(()=>{ 
-                a.classList.remove('active'); 
-                a.classList.remove('rollout'); 
-            }, 1100);
-            
-            n.classList.add('active');
-            n.classList.remove('next');
-            s.classList.add('next');
-        }
-        
-        function showQuote() {
-            var active, next, stage;
-            quotes.forEach((q) => {
-                if(q.classList.contains('active')){
-                    active = q;
-                } else if(q.classList.contains('next')){
-                    next = q;
-                } else {
-                    stage = q;
-                }    
-            });
-            
-            moveQuotes(active, next, stage);
-        }
-        
-        var show = setInterval(showQuote, 5000);
-        
-        chckUsOut.addEventListener('mouseover', function(){
-            this.classList.add('pulse');
-            timeOut = setTimeout(function(){
-                chckUsOut.classList.remove('pulse');
-            }, 10000);
-        });
     </script>
 </body>
 </html>

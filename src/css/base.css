@@ -10,7 +10,9 @@ body {
     font-weight: 400;
     line-height: 1.6;
     margin: 0;
+    overflow-x: hidden;
     padding: 0;
+    position: relative;
     width: 100%;
 }
 header {
