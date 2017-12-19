@@ -1,6 +1,6 @@
 /*===============BASE=DEFAULTS/LAYOUT==========================*/
 nav {
-    position: fixed;
+    position: relative;
     top: 0;
 }
 .navbar {
@@ -22,12 +22,10 @@ nav {
     padding: 0;
     width: 95%;
 }
-.navbar-logo {
-    float: left;
-}
-.navbar-right {
-    float: right;
-}
+.navbar-logo { float: left;}
+
+.navbar-right { float: right;}
+
 .nav-group {
     background: #fff;
     height: 100vh;
@@ -40,9 +38,7 @@ nav {
     width: 200px;
     text-align: center;
 }
-.nav-item {
-    display: block;
-}
+.nav-item { display: block;}
 /*===============MODULES=========================*/
 .potp-logo {
     box-shadow: 0 0 8px #303030;
@@ -55,9 +51,7 @@ nav {
     margin: 5px;
     width: 120px;
 }
-.potp-logo:hover {
-    transform: scale(1.2) translateY(5px);
-}
+.potp-logo:hover { transform: scale(1.2) translateY(5px);}
 /*===============LINKS===========================*/
 .nav-item a:link,
 .nav-item a:visited {
@@ -90,12 +84,10 @@ nav {
     transition: all 0.3s;
     z-index: 999;
 }
-.nav-btn:focus {
-    outline: none;
-}
-.nav-btn:hover {
-    transform: scale(1.03);
-}
+.nav-btn:focus { outline: none;}
+
+.nav-btn:hover { transform: scale(1.03);}
+
 .navbar.solid .nav-btn {
     border: 2px solid #2A57CC;
     color: #2A57CC;
@@ -112,9 +104,8 @@ nav {
     }
 }
 @media screen and (min-width: 960px) {
-    .nav-inner {
-        width: 90%;
-    }
+    nav { position: fixed}
+    .nav-inner { width: 90%;}
     .navbar-logo img[src*="logo-white"] {
         margin: 5px 0;
         width: 150px;

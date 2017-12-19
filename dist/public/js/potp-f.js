@@ -96,7 +96,6 @@ $(document).ready(function () {
     //=====TEST listener to remove animation classes when needed=======================================
     ANIMATIONS.forEach((animation) => {
         animation.addEventListener('animationend', function () {
-            console.log(this.classList);
             this.classList.remove('pulse', 'rollout', 'active');
         });
     });
