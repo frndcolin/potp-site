@@ -1,7 +1,7 @@
 /*==========BANNER MODULES==========*/
 #banner-msg {
     color: #fff;
-    padding: 15vh 0 0;
+    padding: 12vh 0 0;
     text-align: center;
 }
 .banner-nav {
@@ -65,9 +65,8 @@
 }
 
 /*===========QUOTES BOX=====================*/
-.quotes {
-    position: relative;
-}
+.quotes { position: relative;}
+
 .quote {
     background: #2A57CC;
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.2), -4px 2px 12px rgba(0, 0, 0, 0.3);
@@ -83,15 +82,12 @@
     width: 350px;
     z-index: 22
 }
-.quote:nth-child(2){
-    background: #5375EA;
-}
-.quote:nth-child(3){
-    background: #6486DB;
-}
-.quote.next {
-    z-index: 23;
-}
+.quote:nth-child(2){ background: #5375EA;}
+
+.quote:nth-child(3){ background: #6486DB;}
+
+.quote.next { z-index: 23;}
+
 .quote.active {
     left: 0;
     top: 0;

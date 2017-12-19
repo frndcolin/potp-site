@@ -18,7 +18,8 @@ body {
   background: #fafafa;
   color: #333;
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
+  /*  CHANGE TO 18 for lg screens  */
   font-weight: 400;
   line-height: 1.6;
   margin: 0;
@@ -275,7 +276,7 @@ nav {
 
 #banner-msg {
   color: #fff;
-  padding: 15vh 0 0;
+  padding: 12vh 0 0;
   text-align: center;
 }
 
@@ -854,9 +855,11 @@ h3 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
+  /* increase to 4rem for lg screen */
   font-weight: 300;
   letter-spacing: -3px;
+  line-height: 1;
   margin-bottom: 0;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.5),
                  0 0 18px rgba(0, 0, 0, 0.6),
