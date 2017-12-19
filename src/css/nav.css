@@ -1,3 +1,10 @@
+/*
+#1976D2  -- prim blue
+#FF9100  -- prim orng
+#f57c00  --  dark orng
+
+*/
+
 /*===============BASE=DEFAULTS/LAYOUT==========================*/
 nav {
     position: fixed;
@@ -6,14 +13,16 @@ nav {
 .navbar {
     background: transparent;
     color: #fafafa;
+    font-size: 18px;
+    font-weight: 500;
     height: 60px;
     transition: all 0.2s;
     width: 100%;
     z-index: 999;
 }
 .navbar.solid {
-    background: #fafafa;
-    color: #2A57CC;
+    background: #fff;
+    color: #1976D2;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
 .navbar-inner {
@@ -66,7 +75,7 @@ nav {
 .navbar-solid .nav-item a:hover,
 .navbar-solid .nav-item a:active {
     color: #fff;
-    background: #2A57CC;
+    background: #1976D2;
 }
 
 /*===============MOBILE BTN======================*/
@@ -89,8 +98,8 @@ nav {
 .nav-btn:hover { transform: scale(1.03);}
 
 .navbar.solid .nav-btn {
-    border: 2px solid #2A57CC;
-    color: #2A57CC;
+    border: 2px solid #1976D2;
+    color: #1976D2;
     font-size: 26px;
     right: 40px;
     top: 8px;
@@ -127,17 +136,3 @@ nav {
     }
     .navbar.solid .nav-item{ margin: 0 5px;}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

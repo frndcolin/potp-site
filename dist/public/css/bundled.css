@@ -92,6 +92,23 @@ footer hr {
   width: 90%;
 }
 
+@media screen and (min-width: 580px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+
+}
+
+/*
+#1976D2  -- prim blue
+#FF9100  -- prim orng
+#f57c00  --  dark orng
+
+*/
+
 /*===============BASE=DEFAULTS/LAYOUT==========================*/
 
 nav {
@@ -102,6 +119,8 @@ nav {
 .navbar {
   background: transparent;
   color: #fafafa;
+  font-size: 18px;
+  font-weight: 500;
   height: 60px;
   transition: all 0.2s;
   width: 100%;
@@ -109,8 +128,8 @@ nav {
 }
 
 .navbar.solid {
-  background: #fafafa;
-  color: #2A57CC;
+  background: #fff;
+  color: #1976D2;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -182,7 +201,7 @@ nav {
 .navbar-solid .nav-item a:hover,
 .navbar-solid .nav-item a:active {
   color: #fff;
-  background: #2A57CC;
+  background: #1976D2;
 }
 
 /*===============MOBILE BTN======================*/
@@ -211,8 +230,8 @@ nav {
 }
 
 .navbar.solid .nav-btn {
-  border: 2px solid #2A57CC;
-  color: #2A57CC;
+  border: 2px solid #1976D2;
+  color: #1976D2;
   font-size: 26px;
   right: 40px;
   top: 8px;
@@ -329,9 +348,9 @@ nav {
 .btn:link,
 .btn:visited {
   background: transparent;
-  border: 2px solid #FF6E00;
+  border: 2px solid #FF9100;
   border-radius: 7px;
-  color: #FF6E00;
+  color: #FF9100;
   font-size: 1.1rem;
   font-weight: 500;
   padding: 10px 30px;
@@ -341,15 +360,15 @@ nav {
 }
 
 .btn.btn-full {
-  background: #FF6E00;
-  border-color: #FF6E00;
+  background: #FF9100;
+  border-color: #FF9100;
   color: #fafafa;
 }
 
 .btn:hover,
 .btn:active {
-  background: #F2600C;
-  border-color: #F2600C;
+  background: #f57c00;
+  border-color: #f57c00;
   color: #fff;
 }
 
@@ -360,7 +379,7 @@ nav {
 }
 
 .quote {
-  background: #2A57CC;
+  background: #1976D2;
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.2), -4px 2px 12px rgba(0, 0, 0, 0.3);
   border-radius: 3px;
   color: #fafafa;
@@ -376,11 +395,11 @@ nav {
 }
 
 .quote:nth-child(2) {
-  background: #5375EA;
+  background: #1565C0;
 }
 
 .quote:nth-child(3) {
-  background: #6486DB;
+  background: #2962FF;
 }
 
 .quote.next {
@@ -459,7 +478,7 @@ nav {
 /*=============ABOUT IMGS===================*/
 
 #about {
-  background: #6486DB;
+  background: #1976D2;
   color: #fafafa;
 }
 
@@ -537,7 +556,7 @@ nav {
 /*=====================SERVICE CARDS===========================*/
 
 #service {
-  background-color: #EAF0FF;
+  background-color: #e3f2fd;
 }
 
 #service p {
@@ -547,8 +566,8 @@ nav {
 .service-card {
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 0 18px #cfcfcf,
-                -2px 0 24px #cfcfcf;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1),
+                -2px 0 18px rgba(0, 0, 0, 0.3);
   margin: 40px 10px;
 }
 
@@ -558,7 +577,7 @@ nav {
 }
 
 .service-card div:first-child {
-  background-color: #F6F8FC;
+  background-color: #F8F8F8;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   text-align: center;
@@ -570,7 +589,7 @@ nav {
 }
 
 .service-price {
-  color: #FF7C30;
+  color: #FF9100;
   display: block;
   font-size: 0.9em;
   font-weight: 400;
@@ -588,7 +607,7 @@ nav {
 }
 
 .fa-check {
-  color: #FF6E00;
+  color: #FF9100;
   margin: 0 7px 0 0;
 }
 
@@ -679,7 +698,7 @@ nav {
 
 #contact a:hover,
 #contact a:active {
-  color: #2A57CC;
+  color: #1976D2;
 }
 
 #contact-form {
@@ -693,13 +712,13 @@ nav {
 }
 
 #contact-form h3 {
-  color: #2A57CC;
+  color: #1976D2;
   font-weight: 500;
   margin: 4px 0 0 0;
 }
 
 #contact-form h3:after {
-  background-color: #2A57CC;
+  background-color: #1976D2;
   content: "";
   display: block;
   height: 1.5px;
@@ -818,7 +837,7 @@ textarea {
 
 .footer-item a:hover,
 .footer a:active {
-  color: #2A57CC;
+  color: #1976D2;
 }
 
 .footer-icon i {
@@ -847,6 +866,16 @@ textarea {
   -webkit-text-fill-color: transparent;
 }
 
+@media screen and (min-width: 580px) {
+
+}
+
+@media screen and (min-width: 960px) {
+  #banner-msg {
+    padding: 26vh 0 0;
+  }
+}
+
 h2,
 h3 {
   font-weight: 400;
@@ -872,7 +901,7 @@ h2 {
 }
 
 h2:after {
-  background-color: #2A57CC;
+  background-color: #1976D2;
   content: "";
   display: block;
   height: 2px;
@@ -886,7 +915,6 @@ h3 {
 
 p {
   padding: 0 10px;
-  text-indent: 2.5em;
 }
 
 .no-margin {
@@ -905,6 +933,16 @@ p {
 .txt-right {
   padding-right: 15px;
   text-align: right !important;
+}
+
+@media screen and (min-width: 580px) {
+
+}
+
+@media screen and (min-width: 960px) {
+  h1 {
+    font-size: 4rem;
+  }
 }
 
 .animated {

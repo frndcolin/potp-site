@@ -16,7 +16,7 @@ h1 {
 }
 h2 { font-size: 2rem;}
 h2:after {
-    background-color: #2A57CC;
+    background-color: #1976D2;
     content: "";
     display: block;
     height: 2px;
@@ -28,7 +28,6 @@ h3 { font-size: 1.8rem;}
 
 p {
     padding: 0 10px;
-    text-indent: 2.5em
 }
 
 .no-margin {
@@ -44,4 +43,11 @@ p {
 .txt-right {
     padding-right: 15px;
     text-align: right !important;
+}
+
+@media screen and (min-width: 580px) {
+    
+}
+@media screen and (min-width: 960px) {
+    h1 { font-size: 4rem;}
 }

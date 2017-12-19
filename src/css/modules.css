@@ -43,9 +43,9 @@
 /*==========BUTTON MODULES==========*/
 .btn, .btn:link, .btn:visited {
     background: transparent;
-    border: 2px solid #FF6E00;
+    border: 2px solid #FF9100;
     border-radius: 7px;
-    color: #FF6E00;
+    color: #FF9100;
     font-size: 1.1rem;
     font-weight: 500;
     padding: 10px 30px;
@@ -54,13 +54,13 @@
     transition: all 0.3s;
 }
 .btn.btn-full {
-    background: #FF6E00;
-    border-color: #FF6E00;
+    background: #FF9100;
+    border-color: #FF9100;
     color: #fafafa;
 }
 .btn:hover, .btn:active {
-    background: #F2600C;
-    border-color: #F2600C;
+    background: #f57c00;
+    border-color: #f57c00;
     color: #fff;
 }
 
@@ -68,7 +68,7 @@
 .quotes { position: relative;}
 
 .quote {
-    background: #2A57CC;
+    background: #1976D2;
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.2), -4px 2px 12px rgba(0, 0, 0, 0.3);
     border-radius: 3px;
     color: #fafafa;
@@ -82,9 +82,9 @@
     width: 350px;
     z-index: 22
 }
-.quote:nth-child(2){ background: #5375EA;}
+.quote:nth-child(2){ background: #1565C0;}
 
-.quote:nth-child(3){ background: #6486DB;}
+.quote:nth-child(3){ background: #2962FF;}
 
 .quote.next { z-index: 23;}
 
@@ -130,7 +130,7 @@
 
 /*=============ABOUT IMGS===================*/
 #about {
-    background: #6486DB;
+    background: #1976D2;
     color: #fafafa;
 }
 #about h2:after {
@@ -196,13 +196,13 @@
 }
 
 /*=====================SERVICE CARDS===========================*/
-#service { background-color: #EAF0FF;}
+#service { background-color: #e3f2fd;}
 #service p { margin-top: 24px;}
 .service-card {
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 18px #cfcfcf,
-                -2px 0 24px #cfcfcf;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1),
+                -2px 0 18px rgba(0, 0, 0, 0.3);
     margin: 40px 10px;
 }
 .service-card div {
@@ -210,7 +210,7 @@
     padding: 24px 12px;
 }
 .service-card div:first-child {
-    background-color: #F6F8FC;
+    background-color: #F8F8F8;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     text-align: center;
@@ -220,7 +220,7 @@
     text-align: center;
 }
 .service-price {
-    color: #FF7C30; 
+    color: #FF9100; 
     display: block;
     font-size: 0.9em;
     font-weight: 400;
@@ -235,7 +235,7 @@
     margin: 12px 0;
 }
 .fa-check {
-    color: #FF6E00;
+    color: #FF9100;
     margin: 0 7px 0 0;
 }
 
@@ -311,7 +311,7 @@
     color: #333;
 }
 #contact a:hover, #contact a:active {
-    color: #2A57CC;
+    color: #1976D2;
 }
 #contact-form {
     background-color: #EBEFFA;
@@ -323,11 +323,11 @@
     width: 100%;
 }
 #contact-form h3 { 
-    color: #2A57CC; 
+    color: #1976D2; 
     font-weight: 500;
     margin: 4px 0 0 0;}
 #contact-form h3:after {
-    background-color: #2A57CC;
+    background-color: #1976D2;
     content: "";
     display: block;
     height: 1.5px;
@@ -417,7 +417,7 @@ textarea {
     text-decoration: none;
 }
 .footer-item a:link, .footer a:visited { color: #ddd}
-.footer-item a:hover, .footer a:active { color: #2A57CC}
+.footer-item a:hover, .footer a:active { color: #1976D2}
 
 .footer-icon i { color: #ddd}
 .footer-icon .fa-facebook-square:hover { color: #4C5fd7;}
@@ -428,4 +428,11 @@ textarea {
 	background: linear-gradient(#4C5fd7, #7232bd, #c32aa3, #ffdc7d);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+@media screen and (min-width: 580px) {
+    
+}
+@media screen and (min-width: 960px) {
+    #banner-msg { padding: 26vh 0 0;}
 }

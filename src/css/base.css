@@ -71,7 +71,14 @@ footer hr {
     width: 90%;
 }
 
-
+@media screen and (min-width: 580px) {
+    body {
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 960px) {
+    
+}
 
 
 
