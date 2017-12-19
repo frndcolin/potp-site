@@ -1,3 +1,5 @@
+const formJs = require('./potp-form');
+
 $(document).ready(function(){
     var whiteLogo = 'public/img/logo/logo-white.svg';
     var blueLogo = 'public/img/logo/potp-logo.svg';
