@@ -94,7 +94,7 @@ footer hr {
 /*===============BASE=DEFAULTS/LAYOUT==========================*/
 
 nav {
-  position: relative;
+  position: fixed;
   top: 0;
 }
 
@@ -231,10 +231,6 @@ nav {
 }
 
 @media screen and (min-width: 960px) {
-  nav {
-    position: fixed;
-  }
-
   .nav-inner {
     width: 90%;
   }
