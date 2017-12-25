@@ -32,6 +32,7 @@
 
     <script src="https://use.fontawesome.com/6de892528c.js"></script>
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="./public/js/zenscroll-min.js"></script>
 </head>
 
 <body>
@@ -269,7 +270,6 @@
                         Part of the Pack is ready to help you with your pet care needs. We'd like to know more about you and your pet so we can provide the right services. Join the Pack today, consultations are FREE! Arrange a date and time for a consult or contact us with any questions.</p>
                     <p style="text-indent: 0;">
                         email: <a href="#">partofthepackdogs@gmail.com</a><br> call: <a href="tel:508-280-9021">508-280-9021</a></p>
-
                 </div>
                 <div class="col-5-12">
                     <div class="content">
@@ -279,7 +279,7 @@
                             <form>
                                 <fieldset>
                                     <label>Name:</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your name ">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your name " max="25">
                                 </fieldset>
                                 <fieldset>
                                     <label>e-mail:</label>
@@ -287,7 +287,7 @@
                                 </fieldset>
                                 <fieldset>
                                     <label for="exampleInputEmail1">How can we help?</label>
-                                    <select class="form-control" id="interest">
+                                    <select class="form-control" id="interest" required>
                                             <option>Dog Walking</option>
                                             <option>Pet Visits</option>
                                             <option>Pet Sitting</option>
@@ -355,15 +355,13 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src='public/js/potp-f.js'></script>
+    
+    <script src='public/js/potp.js'></script>
     <script src='public/js/potp-mail.js'></script>
-
     <script>
         (function() {
             emailjs.init("user_Z2IB0LrxE6GwdMpT5wyDR");
         })();
-
     </script>
 </body>
 

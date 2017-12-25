@@ -1,45 +1,24 @@
-const formJs = require('./potp-form');
-
 $(document).ready(function(){
     var whiteLogo = 'public/img/logo/logo-white.svg';
     var blueLogo = 'public/img/logo/potp-logo.svg';
+    var navBtn = document.querySelector('.nav-header button');
+    var anchors = document.querySelectorAll('a[href*="#"]');
     
     function toggleSlide(e){
         e.preventDefault();
-        var $btn  = $(".nav-header button");
-        var $nav  = $("#potp-nav");
-        var $list = $(".nav-list");
+        var nav  = document.querySelector("#potp-nav");
+        var list = document.querySelector(".nav-list");
         
-        $nav.toggleClass("slide");
+        nav..classList.toggle("slide");
         
-        if($nav.hasClass("slide")){
-            $btn.css("animation-name", "roll-in");
-            $list.animate({right: '-20px'}, 800);
+        if(nav.classList.contains("slide")){
+            navBtn.style.animationName = "roll-in";
+            list.style.right = "-20px";
         } else {
-            $btn.css("animation-name", "roll-out");
-            $list.animate({right: '-300px'}, 800);
+            navBtn.style.animationName = "roll-out";
+            list.style.right = "-300px";
         }
     }
-    
-    //smooth scroll
-    function smoothScroll(e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        var target = this.hash;
-        var $target = $(target);
-            
-        $('html, body').stop().animate({'scrollTop': $target.offset().top}, 900, 'swing', function () {
-            window.location.hash = target;
-        });
-    }
-    
-    //----------------------------------------------------------------
-    //==============Vanilla Script====================================
-    //----------------------------------------------------------------
-    
-    var navBtn = document.querySelector('.nav-header button');
-    var anchors = document.querySelectorAll('a[href*="#"]');
     
     function watchScroll(e){
         var pagePosY = window.scrollY;  
@@ -66,5 +45,6 @@ $(document).ready(function(){
     navBtn.addEventListener('click', toggleSlide);
     anchors.forEach(function(a){a.addEventListener('click', smoothScroll)});
 });
+
 
 

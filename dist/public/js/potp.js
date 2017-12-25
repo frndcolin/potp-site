@@ -1,28 +1,8 @@
-$(document).ready(function () {
-    var whiteLogo = 'public/img/logo/logo-white.svg';
-    var blueLogo = 'public/img/logo/potp-logo.svg';
-
-    //smooth scroll
-    function smoothScroll(e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        var target = this.hash;
-        var $target = $(target);
-
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-        }, 900, 'swing', function () {
-            window.location.hash = target;
-        });
-    }
-
-    //----------------------------------------------------------------
-    //==============Vanilla Script====================================
-    //----------------------------------------------------------------
+(function() {
+    const whiteLogo = 'public/img/logo/logo-white.svg';
+    const blueLogo = 'public/img/logo/potp-logo.svg';
     const PAGE = window.document;                                       //document for scroll watching
     const NAVBAR = document.querySelector('.navbar');                   //main navbar
-    const ANCHORS = document.querySelectorAll('a[href*="#"]');          //all internal anchor tags
     const NAV_BTN = document.querySelector('.nav-btn');                 //navbar button for small screens
     const NAV_LIST = document.querySelector('.nav-group');              //main nav list
     const LOGO = document.querySelector('.potp-logo');                  //navbar logo
@@ -88,16 +68,6 @@ $(document).ready(function () {
     //========INITIALIZE EVENTs & EVENT LISTENERS=======================================================
     quoteTimer = setInterval(showQuote, 5000);                                      //time interval for quote animation
     PAGE.addEventListener('scroll', watchScroll);                                   //listener for scroll events
-    ANCHORS.forEach((a) => { a.addEventListener('click', smoothScroll)});           //smooth scroll for anchor tags
     NAV_BTN.addEventListener('click', toggleNavBtnAnimation);                       //nav btn and slide animation
-    
     CHCK_US_OUT.addEventListener('mouseover', function () { CHCK_US_OUT.classList.add('pulse');}); //listener for h3 tag in Welcome section
-
-    //=====TEST listener to remove animation classes when needed=======================================
-    ANIMATIONS.forEach((animation) => {
-        animation.addEventListener('animationend', function () {
-            this.classList.remove('pulse', 'rollout', 'active');
-        });
-    });
-
-});
+}());
