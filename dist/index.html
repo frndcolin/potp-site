@@ -15,7 +15,6 @@
         }
         gtag('js', new Date());
         gtag('config', 'UA-109028742-1');
-
     </script>
 
 
@@ -33,6 +32,12 @@
     <script src="https://use.fontawesome.com/6de892528c.js"></script>
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="./public/js/zenscroll-min.js"></script>
+    <script src="./public/js/validate.js"></script>
+    <script>
+        (function() {
+            emailjs.init("user_Z2IB0LrxE6GwdMpT5wyDR");
+        })();
+    </script>
 </head>
 
 <body>
@@ -276,18 +281,18 @@
                         <div id="contact-form">
                             <h3>Join the Pack!</h3>
                             <div id='form-success' style='display:none'></div>
-                            <form>
+                            <form name="new_customer">
                                 <fieldset>
-                                    <label>Name:</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your name " max="25">
+                                    <label for="name">Name:</label>
+                                    <input type="text" name="name" id="name" placeholder="Your name*">
                                 </fieldset>
                                 <fieldset>
-                                    <label>e-mail:</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your email" required>
+                                    <label for="email">e-mail:</label>
+                                    <input type="email" name="email" id="email" placeholder="Your email" required>
                                 </fieldset>
                                 <fieldset>
-                                    <label for="exampleInputEmail1">How can we help?</label>
-                                    <select class="form-control" id="interest" required>
+                                    <label for="services">How can we help?</label>
+                                    <select name="services" id="services" required>
                                             <option>Dog Walking</option>
                                             <option>Pet Visits</option>
                                             <option>Pet Sitting</option>
@@ -295,8 +300,8 @@
                                         </select>
                                 </fieldset>
                                 <fieldset>
-                                    <label for="exampleInputFile">Tell us about your pet:</label>
-                                    <textarea id="message" class="form-control" rows="4"></textarea>
+                                    <label for="message">Tell us about your pet:</label>
+                                    <textarea id="message" name="message" rows="4"></textarea>
                                 </fieldset>
                                 <button type="submit" class="btn">Submit</button>
                             </form>
@@ -355,13 +360,44 @@
         </div>
     </footer>
 
-    
     <script src='public/js/potp.js'></script>
     <script src='public/js/potp-mail.js'></script>
+
     <script>
-        (function() {
-            emailjs.init("user_Z2IB0LrxE6GwdMpT5wyDR");
-        })();
+        var formName        = document.querySelector('input#name');
+        var formEmail       = document.querySelector('input#email');
+        var formMsg         = document.querySelector('textarea#message');
+        var formInterest    = document.querySelector('select#services');
+        var formVals = {};
+        
+        var validator = new FormValidator('new_customer', [{
+            name: 'name',
+            rules: 'required|max_length[25]|alpha'
+        }, {
+            name: 'email',
+            rules: 'required|valid_email'
+        }, {
+            name: 'message',
+            rules: 'max_length[500]'
+        }], function(errors, event) {
+            if (errors.length > 0) {
+                var errLength = errors.length;
+                var errorString = '';
+
+                for (var i = 0; i < errLength; i++) {
+                    errorString += errors[i].message + '</br>';
+                }
+                alert(errorString);
+            } else {
+                formVals = {
+                    name: formName.value,
+                    email: formEmail.value,
+                    msg: formMsg.value,
+                    service: formInterest.value
+                }
+                sendMail(event, formVals);
+            }
+        });
     </script>
 </body>
 
