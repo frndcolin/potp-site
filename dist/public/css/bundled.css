@@ -983,7 +983,7 @@ p {
   }
 }
 
-.rollout {
+.rotateout {
   animation-duration: 1.5s;
   animation-name: rotateOutDownRight;
 }

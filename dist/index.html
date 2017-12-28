@@ -360,45 +360,8 @@
         </div>
     </footer>
 
-    <script src='public/js/potp.js'></script>
-    <script src='public/js/potp-mail.js'></script>
-
-    <script>
-        var formName        = document.querySelector('input#name');
-        var formEmail       = document.querySelector('input#email');
-        var formMsg         = document.querySelector('textarea#message');
-        var formInterest    = document.querySelector('select#services');
-        var formVals = {};
-        
-        var validator = new FormValidator('new_customer', [{
-            name: 'name',
-            rules: 'required|max_length[25]|alpha'
-        }, {
-            name: 'email',
-            rules: 'required|valid_email'
-        }, {
-            name: 'message',
-            rules: 'max_length[500]'
-        }], function(errors, event) {
-            if (errors.length > 0) {
-                var errLength = errors.length;
-                var errorString = '';
-
-                for (var i = 0; i < errLength; i++) {
-                    errorString += errors[i].message + '</br>';
-                }
-                alert(errorString);
-            } else {
-                formVals = {
-                    name: formName.value,
-                    email: formEmail.value,
-                    msg: formMsg.value,
-                    service: formInterest.value
-                }
-                sendMail(event, formVals);
-            }
-        });
-    </script>
+<!--    <script src='public/js/potp.js'></script>-->
+    <script src='../clean.js'></script>
 </body>
 
 </html>
