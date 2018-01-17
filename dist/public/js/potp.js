@@ -12,7 +12,7 @@
     var quoteTimer;
     var contactForm = {
         form: d.querySelector('form'),
-        successMsg: d.getElementById('form-success'),
+        successMsg: d.querySelector('.form-success'),
         name: d.querySelector('input#name'),
         email: d.querySelector('input#email'),
         msg: d.querySelector('textarea#message'),
@@ -45,11 +45,11 @@
     function sendMail(e, values) {
         e.preventDefault();
         
-        emailjs.send("sendgrid", "new_customer", values)
+        emailjs.send("sendgrid", "part_of_the_pack", values)
             .then(function (response) {
                 contactForm.form.style.display = 'none';
                 contactForm.successMsg.style.display = 'block';
-                contactForm.successMsg.innerHTML = '<h2>Message sent successfuly</h2>';
+                contactForm.successMsg.innerHTML = '<p>Thank you for your interest in joining the Pack, you will hear from us soon!</p>';
             }, function (err) {
                 console.log("FAILED. error=", err);
             });
